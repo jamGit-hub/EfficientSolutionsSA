@@ -134,11 +134,11 @@ const translations = {
     'contact.office.val':'Eastern Province, Kingdom of Saudi Arabia',
     'contact.form.h3':  'Send Us a Message',
     'contact.form.p':   ' Fill in the form below to reach our team!',
-    'form.name':    'Full Name',
-    'form.company': 'Company Name',
-    'form.email':   'Email Address',
+    'form.name':    'Full Name *',
+    'form.company': 'Company Name *',
+    'form.email':   'Email Address *',
     'form.service': 'Service of Interest',
-    'form.message': 'Message',
+    'form.message': 'Message *',
     'form.submit':  'Send Message',
     'form.success.h3': 'Message Sent!',
     'service.select': 'Select a Service',
@@ -323,11 +323,11 @@ const translations = {
     'contact.office.val':'المنطقة الشرقية، المملكة العربية السعودية',
     'contact.form.h3':  'أرسل لنا رسالة',
     'contact.form.p':   'املأ النموذج أدناه للتواصل السريع مع الفريق!',
-    'form.name':    'الاسم الكامل',
-    'form.company': 'اسم الشركة',
-    'form.email':   'البريد الإلكتروني',
+    'form.name':    '* الاسم الكامل',
+    'form.company': '* اسم الشركة',
+    'form.email':   '* البريد الإلكتروني',
     'form.service': 'الخدمة المطلوبة',
-    'form.message': 'الرسالة',
+    'form.message': '* الرسالة',
     'form.submit':  'إرسال الرسالة',
     'form.success.h3': 'تم الإرسال!',
     'service.select': 'اختر خدمة',
@@ -523,24 +523,34 @@ function initCounters() {
 
 /* ── Contact Form ─────────────────────────────────────────── */
 function initContactForm() {
-  const form = $('#contact-form');
-  if (!form) return;
+  const form = document.getElementById("contact-form");
+  const btn = form.querySelector(".form-submit");
+  const successMsg = document.getElementById("form-success");
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const btn = form.querySelector('.form-submit');
-    const successMsg = $('#form-success');
     btn.disabled = true;
-    btn.textContent = '...';
+    btn.textContent = "Sending...";
 
-    /* Simulate async submission */
-    setTimeout(() => {
+    emailjs.sendForm(
+      "service_13t62vi",
+      "template_gxl6y0j",
+      form
+    ).then(() => {
       form.reset();
+      successMsg.classList.add("visible");
+
       btn.disabled = false;
-      btn.textContent = translations[currentLang]['form.submit'];
-      successMsg.classList.add('visible');
-    }, 900);
+      btn.textContent = "Send Message";
+    }).catch((error) => {
+      console.log("FAILED...", error);
+
+      alert("Message failed. Try again.");
+
+      btn.disabled = false;
+      btn.textContent = "Send Message";
+    });
   });
 }
 
