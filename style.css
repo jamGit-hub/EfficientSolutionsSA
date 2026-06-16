@@ -18,13 +18,7 @@ html {
   font-size: 16px;
 }
 
-body {
-  font-family: 'Inter', 'Open Sans', sans-serif;
-  color: #2D3748;
-  background: #FFFFFF;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
+
 
 /* RTL support */
 [dir="rtl"] body { font-family: 'Noto Kufi Arabic', 'Inter', sans-serif; }
@@ -37,6 +31,7 @@ ul { list-style: none; }
 
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
+  --navbar-height: 80px;
   --navy:        #0B1F3A;
   --navy-light:  #162D52;
   --green:       #0F766E;
@@ -53,6 +48,15 @@ ul { list-style: none; }
   --shadow-lg:   0 20px 60px rgba(11, 31, 58, 0.16);
   --transition:  0.3s ease;
   --max-width:   1200px;
+}
+
+body {
+  font-family: 'Inter', 'Open Sans', sans-serif;
+  color: #2D3748;
+  background: #FFFFFF;
+  line-height: 1.7;
+  overflow-x: hidden;
+  padding-top: var(--navbar-height);
 }
 
 /* ── Typography ───────────────────────────────────────────── */
@@ -121,6 +125,26 @@ p { color: var(--muted); font-size: 1rem; }
 
 .divider-left { margin: 16px 0 0; }
 
+@media (max-width: 768px) {
+ 
+  .nav-links {
+    display: none;
+  }
+  #navbar {
+    height: 80px;
+    padding: 0 16px;
+  }
+  .lang-toggle {
+    display: none;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /* ── Buttons ──────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
@@ -178,6 +202,7 @@ p { color: var(--muted); font-size: 1rem; }
 
 /* ── Navigation ───────────────────────────────────────────── */
 #navbar {
+  background-color:#0B1F3A;
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
@@ -251,6 +276,7 @@ p { color: var(--muted); font-size: 1rem; }
   align-items: center;
   gap: 12px;
 }
+
 
 /* Language toggle */
 .lang-toggle {
@@ -355,8 +381,8 @@ p { color: var(--muted); font-size: 1rem; }
 
 /* ── Hero Section ─────────────────────────────────────────── */
 #hero {
+    min-height: calc(100vh - var(--navbar-height));
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -473,6 +499,7 @@ p { color: var(--muted); font-size: 1rem; }
   color: var(--white);
   line-height: 1;
 }
+
 
 .stat-number span { color: var(--green); }
 
