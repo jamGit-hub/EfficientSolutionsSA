@@ -14,8 +14,9 @@ const translations = {
     'nav.about':      'About Us',
     'nav.services':   'Services',
     'nav.industries': 'Industries',
-    'nav.contact':    'Contact',
+    'nav.contact':    'Contact Us',
     'nav.cta':        'Get in Touch',
+    'nav.products' : 'Products',
 
     /* Hero */
     'hero.tag':    'Your Gateway to Saudi Arabia',
@@ -129,9 +130,9 @@ const translations = {
     'contact.email':    'Email Us',
     'contact.phone':    'Call Us',
     'contact.office':   'Our Location',
-    'contact.email.val': 'yousef.es@efficientsolutionsksa.es',
+    'contact.email.val': 'yousef.es@efficientsolutionsksa.com',
     'contact.phone.val': '+996 (0)50 481 0549',
-    'contact.office.val':'Eastern Province, Kingdom of Saudi Arabia',
+    'contact.office.val':'Alkhobar, Eastern Province, Kingdom of Saudi Arabia',
     'contact.form.h3':  'Send Us a Message',
     'contact.form.p':   ' Fill in the form below to reach our team!',
     'form.name':    'Full Name *',
@@ -193,6 +194,139 @@ const translations = {
     /* Industries page */
     'industries.page.h1': 'Industries We Serve',
     'industries.page.hero.p': 'Deep sector expertise across Saudi Arabia\'s most dynamic engineering and industrial fields.',
+
+    "products.title": "Our Engineering Solutions",
+    "products.subtitle": "Explore our advanced industrial services.",
+
+    "prod.animation.title": "Engineering Animation",
+    "prod.animation.desc": "Advanced 3D engineering visualization.",
+
+    "prod.seals.title": "Mechanical Seals & Systems",
+    "prod.seals.desc": "Industrial sealing solutions for machinery.",
+
+    "common.view": "View Details →",
+    "common.contact": "Contact Us",
+    "common.quote": "Request Quote",
+
+    "anim.f1": "3D industrial visualization",
+    "anim.f2": "Process simulation videos",
+    "anim.f3": "Training animations",
+    "anim.f4": "Investor presentations",
+"seals.types": "Seals Products",
+  
+    "seals.t1d": "Standard sealing solution",
+
+    "seals.t2d": "High-pressure systems",
+
+    "seals.t3d": "Pre-assembled design",
+    "prod.animation.title": "Engineering Animation & Simulation",
+    "prod.animation.desc": "High-quality 3D engineering visualization for industrial systems, training, and presentations.",
+
+    // SECTIONS
+    "anim.gallery": "Project Gallery",
+    "anim.what": "What We Deliver",
+
+    // SERVICES
+    "anim.f1": "3D Industrial Visualization",
+    "anim.f2": "Process Simulation",
+    "anim.f3": "Training Content",
+    "anim.f4": "Investor Presentations",
+
+    // BUTTONS
+    "common.request": "Request Project",
+    "common.view": "View Details",
+
+    "seals.hero.title": "Mechanical Seals & Support Systems",
+    "seals.hero.desc": "High-performance sealing solutions engineered for reliability in the most demanding industrial environments.",
+    "seals.partner.badge": "Official partner of LINEPROOF",
+  
+  
+    "seals.spec.title": "Technical Specifications",
+    "seals.spec.heading": "Built for Demanding Environments",
+    "seals.spec.desc": "Every seal meets international standards and is tested for industrial conditions in Saudi Arabia.",
+  
+    "seals.spec.p1.title": "Pressure Range",
+    "seals.spec.p1.text": "Up to 40 bar operating pressure",
+  
+    "seals.spec.p2.title": "Temperature Tolerance",
+    "seals.spec.p2.text": "-40°C to +200°C",
+  
+    "seals.spec.p3.title": "Material Options",
+    "seals.spec.p3.text": "Silicon carbide, carbon graphite, ceramic",
+  
+    "seals.spec.p4.title": "Compliance",
+    "seals.spec.p4.text": "API 682 / ISO 21049 certified",
+  
+    "seals.partner.title": "In Partnership With LINEPROOF",
+    "seals.partner.desc": "Our collaboration brings globally certified sealing technology to Saudi Arabia with local support and fast delivery.",
+    "seals.partner.cta": "Request a Quote",
+
+
+      "prod.hero.eyebrow": "Our Engineering Portfolio",
+      "prod.hero.title": "Advanced Industrial Solutions",
+      "prod.hero.desc": "Explore our precision-engineered products and services, developed in collaboration with global technology partners for Saudi Arabia's industrial future.",
+      "prod.hero.stat1": "Product Lines",
+      "prod.hero.stat2": "Market Focus",
+      "prod.hero.stat3": "Certified",
+    
+      "prod.intro.eyebrow": "What We Offer",
+      "prod.intro.title": "Engineering Solutions Built for Industry",
+      "prod.intro.desc": "Each solution is backed by international expertise and tailored to the demands of Saudi Arabia's rapidly growing industrial sector.",
+    
+      "prod.anim.badge": "3D Visualization",
+      "prod.anim.partner": "Partner Technology",
+      "prod.animation.title": "Engineering Animation",
+      "prod.animation.desc": "Advanced 3D engineering visualization and industrial simulation — bringing complex systems to life for training, presentations, and technical review.",
+      "prod.anim.link": "Explore Product",
+      "prod.anim.tag1": "3D Rendering",
+      "prod.anim.tag2": "Simulation",
+    
+      "prod.seals.badge": "Industrial Components",
+      "prod.seals.partner": "In collaboration with LINEPROOF",
+      "prod.seals.title": "Mechanical Seals & Systems",
+      "prod.seals.desc": "High-performance sealing solutions for industrial pumps and heavy machinery — engineered for reliability in demanding environments.",
+      "prod.seals.link": "Explore Product",
+      "prod.seals.tag1": "Sealing",
+      "prod.seals.tag2": "Pumps",
+      "prod.seals.tag3": "Heavy Industry",
+    
+      "trust.t1": "2030 Aligned",
+      "trust.t2": "Eastern Province",
+      "trust.t3": "Certified Partners",
+      "trust.t4": "Technical Support",
+      "anim.partner.badge":" Official partner of MECHANIM",
+
+
+      "anim.partner.title": "In Partnership With MECHANIM",
+      "anim.hero.tag": "3D Visualization",
+      "anim.hero.title": "Engineering Animation & Simulation",
+      "anim.hero.desc": "High-quality industrial 3D visualization for training, presentations, and engineering understanding.",
+    
+
+    
+      "anim.gallery.title": "Project Gallery",
+      "anim.g1": "Industrial Simulation",
+      "anim.g2": "Process Visualization",
+      "anim.g3": "Machine Breakdown",
+    
+      "anim.what.title": "What We Deliver",
+    
+      "anim.i1.t": "3D Industrial Visualization",
+      "anim.i1.d": "Realistic models of machines and systems.",
+    
+      "anim.i2.t": "Process Simulation",
+      "anim.i2.d": "Step-by-step animated workflows.",
+    
+      "anim.i3.t": "Training Content",
+      "anim.i3.d": "Used for safety and employee training.",
+    
+      "anim.i4.t": "Investor Presentations",
+      "anim.i4.d": "High-end visuals for business pitches.",
+    
+      "anim.partner.title": "In Partnership With MECHANIM",
+      "anim.partner.desc": "Our collaboration brings globally certified engineering visualization solutions with local support and fast delivery.",
+      "anim.partner.cta": "Request a Quote"
+      
   },
 
   ar: {
@@ -203,6 +337,7 @@ const translations = {
     'nav.industries': 'القطاعات',
     'nav.contact':    'اتصل بنا',
     'nav.cta':        'تواصل معنا',
+    'nav.products' : 'المنتجات',
 
     /* Hero */
     'hero.tag':    'بوابتك إلى المملكة العربية السعودية',
@@ -320,7 +455,7 @@ const translations = {
     'contact.office':   'موقعنا',
     'contact.email.val': 'yousef.es@efficientsolutionsksa.com',
     'contact.phone.val': '+996 (0)50 481 0549',
-    'contact.office.val':'المنطقة الشرقية، المملكة العربية السعودية',
+    'contact.office.val':'الخبر، المنطقة الشرقية، المملكة العربية السعودية',
     'contact.form.h3':  'أرسل لنا رسالة',
     'contact.form.p':   'املأ النموذج أدناه للتواصل السريع مع الفريق!',
     'form.name':    '* الاسم الكامل',
@@ -381,8 +516,146 @@ const translations = {
     /* Industries page */
     'industries.page.h1': 'القطاعات التي نخدمها',
     'industries.page.hero.p': 'خبرة قطاعية عميقة في أبرز مجالات الهندسة والصناعة في المملكة.',
+
+    "products.title": "حلولنا الهندسية",
+    "products.subtitle": "استكشف خدماتنا الصناعية المتقدمة.",
+
+    "prod.animation.title": "الرسوم الهندسية",
+    "prod.animation.desc": "تصميم ومحاكاة هندسية ثلاثية الأبعاد.",
+
+    "prod.seals.title": "الأختام الميكانيكية",
+    "prod.seals.desc": "حلول إحكام صناعية للمعدات.",
+
+    "common.view": "عرض التفاصيل ←",
+    "common.contact": "تواصل معنا",
+    "common.quote": "طلب عرض سعر",
+
+    "anim.f1": "تصوير هندسي ثلاثي الأبعاد",
+    "anim.f2": "محاكاة العمليات",
+    "anim.f3": "تدريب مرئي",
+    "anim.f4": "عروض استثمارية",
+
+    "seals.t1": "ختم مفرد",
+    "seals.t1d": "حلول قياسية",
+
+    "seals.t2": "ختم مزدوج",
+    "seals.t2d": "بيئات ضغط عالي",
+
+    "seals.t3": "نظام كارترج",
+    "seals.t3d": "جاهز للتركيب",
+"seals.types": "منتجات الاختام",
+    
+
+      "prod.animation.title": "الرسوم الهندسية والمحاكاة",
+      "prod.animation.desc": "تصوير هندسي ثلاثي الأبعاد عالي الجودة للأنظمة الصناعية والتدريب والعروض التقديمية.",
+    
+      "anim.gallery": "معرض المشاريع",
+    
+      "anim.what": "ما نقدمه",
+    
+      "anim.f1": "تصوير ثلاثي الأبعاد للأنظمة الصناعية",
+      "anim.f2": "محاكاة العمليات الصناعية خطوة بخطوة",
+      "anim.f3": "محتوى تدريبي للموظفين والسلامة",
+      "anim.f4": "عروض تقديمية للمستثمرين",
+    
+      "common.contact": "تواصل معنا",
+      "common.quote": "طلب عرض سعر",
+      "common.view": "عرض التفاصيل ←",
+
+      "seals.hero.title": "الأختام الميكانيكية وأنظمة الدعم",
+      "seals.hero.desc": "حلول إحكام عالية الأداء مصممة للعمل في أصعب البيئات الصناعية.",
+      "seals.partner.badge": "شريك رسمي لـ LINEPROOF",
+    
+      "seals.spec.title": "المواصفات التقنية",
+      "seals.spec.heading": "مصمم للبيئات الصعبة",
+      "seals.spec.desc": "جميع الأختام مطابقة للمعايير العالمية ومختبرة لظروف الصناعة في السعودية.",
+    
+      "seals.spec.p1.title": "نطاق الضغط",
+      "seals.spec.p1.text": "حتى 40 بار ضغط تشغيل",
+    
+      "seals.spec.p2.title": "تحمل الحرارة",
+      "seals.spec.p2.text": "من -40 إلى +200 درجة مئوية",
+    
+      "seals.spec.p3.title": "المواد",
+      "seals.spec.p3.text": "كربيد السيليكون، الجرافيت الكربوني، السيراميك",
+    
+      "seals.spec.p4.title": "المطابقة",
+      "seals.spec.p4.text": "معتمد وفق API 682 / ISO 21049",
+    
+      "seals.partner.title": "بشراكة مع لاين بروف",
+      "seals.partner.desc": "تجلب هذه الشراكة تقنيات إحكام معتمدة عالميًا إلى السوق السعودي مع دعم محلي سريع.",
+    
+      
+        "prod.hero.eyebrow": "محفظة حلولنا الهندسية",
+        "prod.hero.title": "حلول صناعية متقدمة",
+        "prod.hero.desc": "استكشف منتجاتنا وخدماتنا المصممة بدقة، بالتعاون مع شركاء تقنيين عالميين لمستقبل الصناعة في السعودية.",
+        "prod.hero.stat1": "خطوط المنتجات",
+        "prod.hero.stat2": "تركيز السوق",
+        "prod.hero.stat3": "معتمد",
+      
+        "prod.intro.eyebrow": "ما نقدمه",
+        "prod.intro.title": "حلول هندسية مصممة للصناعة",
+        "prod.intro.desc": "كل حل مدعوم بخبرة عالمية ومصمم لتلبية احتياجات القطاع الصناعي المتنامي في السعودية.",
+      
+        "prod.anim.badge": "تصور ثلاثي الأبعاد",
+        "prod.anim.partner": "تقنية شراكة",
+        "prod.animation.title": "الرسوم الهندسية",
+        "prod.animation.desc": "تصور هندسي ثلاثي الأبعاد ومحاكاة صناعية — لتبسيط الأنظمة المعقدة للتدريب والعرض والمراجعة الفنية.",
+        "prod.anim.link": "استعرض المنتج",
+        "prod.anim.tag1": "تصوير ثلاثي الأبعاد",
+        "prod.anim.tag2": "محاكاة",
+      
+        "prod.seals.badge": "مكونات صناعية",
+        "prod.seals.partner": "بالتعاون مع لاين بروف",
+        "prod.seals.title": "الأختام الميكانيكية وأنظمة الدعم",
+        "prod.seals.desc": "حلول إحكام عالية الأداء للمضخات والآلات الثقيلة — مصممة للعمل في البيئات الصعبة.",
+        "prod.seals.link": "استعرض المنتج",
+        "prod.seals.tag1": "إحكام",
+        "prod.seals.tag2": "مضخات",
+        "prod.seals.tag3": "صناعة ثقيلة",
+      
+        "trust.t1": "متوافق مع رؤية 2030",
+        "trust.t2": "المنطقة الشرقية",
+        "trust.t3": "شركاء معتمدون",
+        "trust.t4": "دعم فني 24/7",
+
+        "anim.partner.title": "بالتعاون مع ميكانيم",
+        "anim.partner.badge":" شريك رسمي لـ MECHANIM",
+
+
+    "anim.hero.tag": "تصميم ثلاثي الأبعاد",
+  "anim.hero.title": "الرسوم الهندسية والمحاكاة",
+  "anim.hero.desc": "تصميمات ثلاثية الأبعاد صناعية عالية الجودة للتدريب والعروض والفهم الهندسي.",
+
+
+  "anim.gallery.title": "معرض المشاريع",
+  "anim.g1": "محاكاة صناعية",
+  "anim.g2": "تصور العمليات",
+  "anim.g3": "تفكيك الآلات",
+
+  "anim.what.title": "ما نقدمه",
+
+  "anim.i1.t": "تصور صناعي ثلاثي الأبعاد",
+  "anim.i1.d": "نماذج واقعية للآلات والأنظمة.",
+
+  "anim.i2.t": "محاكاة العمليات",
+  "anim.i2.d": "توضيح الخطوات بشكل متحرك.",
+
+  "anim.i3.t": "محتوى تدريبي",
+  "anim.i3.d": "يُستخدم للسلامة وتدريب الموظفين.",
+
+  "anim.i4.t": "عروض المستثمرين",
+  "anim.i4.d": "تصاميم احترافية للعروض التجارية.",
+
+  "anim.partner.title": "بشراكة مع MECHANIM",
+  "anim.partner.desc": "شراكتنا توفر حلول تصور هندسي معتمدة عالميًا مع دعم محلي وتسليم سريع.",
+  "anim.partner.cta": "طلب عرض سعر"
+  
   }
+  
 };
+
+
 
 /* ── State ────────────────────────────────────────────────── */
 let currentLang = localStorage.getItem('es_lang') || 'en';
