@@ -202,7 +202,7 @@ p { color: var(--muted); font-size: 1rem; }
 
 /* ── Navigation ───────────────────────────────────────────── */
 #navbar {
-  background-color:rgb(19, 39, 65);
+  background: #0B1F3A; 
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
@@ -230,7 +230,7 @@ p { color: var(--muted); font-size: 1rem; }
 #navbar.scrolled .nav-inner { height: 68px; }
 
 .nav-logo img {
-  height: 65px;
+  height: 70px;
   width: auto;
   transition: height var(--transition);
   filter: brightness(1);
