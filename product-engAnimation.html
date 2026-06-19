@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Engineering animation and 3D industrial visualization for Saudi Arabia — in partnership with Mechanim, a specialist industrial animation studio run by mechanical engineers." />
+  <meta property="og:title" content="Engineering Animation | Efficient Solutions × Mechanim" />
+  <meta property="og:description" content="Transforming complex engineering concepts into clear, compelling 3D animations — delivered to Saudi Arabia in partnership with Mechanim." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.efficientsolutionsksa.com/product-engAnimation.html" />
+  <link rel="icon" type="image/png" href="IconOnly_Transparentcopy.png" />
+
+  <title>Engineering Animation | Efficient Solutions</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── HERO ── */
+    .anim-hero {
+      position: relative;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .anim-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to right, rgba(11,31,58,0.96) 38%, rgba(11,31,58,0.55) 100%),
+        url('https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render.png') center/cover no-repeat;
+      transform: scale(1.04);
+      animation: slowPan 22s ease-in-out infinite alternate;
+    }
+    @keyframes slowPan {
+      from { transform: scale(1.04) translateX(0); }
+      to   { transform: scale(1.08) translateX(-2%); }
+    }
+    .anim-hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto;
+      padding: 130px 24px 90px;
+      width: 100%;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 28px; font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #5EEAD4; }
+    .breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: #5EEAD4;
+      background: rgba(94,234,212,0.12);
+      border: 1px solid rgba(94,234,212,0.3);
+      padding: 5px 14px; border-radius: 50px; margin-bottom: 20px;
+    }
+    .anim-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 800; color: #fff; line-height: 1.15;
+      max-width: 580px; margin-bottom: 20px; letter-spacing: -0.02em;
+    }
+    .anim-hero h1 .teal { color: #5EEAD4; }
+    .anim-hero-desc {
+      color: rgba(255,255,255,0.7); font-size: 1.05rem;
+      max-width: 500px; line-height: 1.75; margin-bottom: 36px;
+    }
+    .hero-partner-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 10px 18px; border-radius: 12px;
+      font-size: 0.82rem; color: rgba(255,255,255,0.8);
+    }
+
+    /* ── VIDEO STRIP ── */
+    .video-strip {
+      max-width: 1200px; margin: 40px auto 0; padding: 0 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .video-card {
+      border-radius: 18px; overflow: hidden;
+      background: #0B1F3A;
+      box-shadow: 0 12px 40px rgba(11,31,58,0.25);
+    }
+    .video-card-embed {
+      position: relative; width: 100%;
+      padding-bottom: 56.25%; height: 0;
+    }
+    .video-card-embed iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: none; display: block;
+    }
+    .video-card-label {
+      padding: 16px 20px 18px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .video-card-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      background: rgba(94,234,212,0.12); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: #5EEAD4;
+    }
+    .video-card-text { flex: 1; }
+    .video-card-text strong {
+      display: block; font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem; font-weight: 600; color: #fff; margin-bottom: 2px;
+    }
+    .video-card-text span { font-size: 0.75rem; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+    .video-card-yt {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 600;
+      color: rgba(255,255,255,0.4); letter-spacing: 0.06em;
+      text-transform: uppercase; text-decoration: none; transition: color 0.2s;
+    }
+    .video-card-yt:hover { color: #FF0000; }
+
+    /* ── SECTION UTILITIES ── */
+    .section-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 10px; display: block;
+    }
+    .section-heading {
+      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+      color: var(--navy); margin-bottom: 14px; letter-spacing: -0.02em;
+    }
+    .section-sub {
+      color: var(--muted); font-size: 1rem;
+      max-width: 520px; margin-bottom: 50px; line-height: 1.7;
+    }
+
+    /* ── WHAT WE DELIVER ── */
+    .anim-section { padding: 90px 0; background: #F8FAFB; }
+    .anim-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 8px;
+    }
+    .app-card {
+      background: #fff; border-radius: 16px;
+      border: 1px solid rgba(11,31,58,0.07);
+      padding: 28px 24px;
+      box-shadow: 0 4px 16px rgba(11,31,58,0.05);
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .app-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(11,31,58,0.1);
+      border-color: var(--green);
+    }
+    .app-card-icon {
+      width: 48px; height: 48px;
+      background: rgba(15,118,110,0.1); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green); margin-bottom: 18px;
+    }
+    .app-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .app-card p  { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin: 0; }
+
+    /* ── PROJECT GALLERY ── */
+    .anim-gallery { padding: 80px 0; background: #fff; }
+    .anim-gallery .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .gallery-card {
+      border-radius: 16px; overflow: hidden; position: relative;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transition: 0.3s ease; background: var(--navy);
+    }
+    .gallery-card:hover { transform: translateY(-6px); box-shadow: 0 18px 50px rgba(0,0,0,0.16); }
+    .gallery-card img {
+      width: 100%; height: 240px; object-fit: cover;
+      transition: 0.4s ease; opacity: 0.92; display: block;
+    }
+    .gallery-card:hover img { transform: scale(1.07); opacity: 1; }
+    .gallery-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 16px;
+      background: linear-gradient(to top, rgba(11,31,58,0.88), transparent);
+      color: #fff; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 0.9rem;
+    }
+    .gallery-tag {
+      display: inline-block; font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; color: #5EEAD4;
+      background: rgba(94,234,212,0.15); padding: 3px 10px;
+      border-radius: 50px; margin-bottom: 6px;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .process-section { padding: 80px 0; background: var(--navy); }
+    .process-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .process-section .section-eyebrow { color: #5EEAD4; }
+    .process-section .section-heading { color: #fff; }
+    .process-section .section-sub { color: rgba(255,255,255,0.55); }
+    .process-steps-anim {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; position: relative; margin-top: 12px;
+    }
+    .process-steps-anim::before {
+      content: ''; position: absolute; top: 34px;
+      left: calc(12.5%); right: calc(12.5%); height: 2px;
+      background: linear-gradient(90deg, #5EEAD4, rgba(255,255,255,0.2)); z-index: 0;
+    }
+    .proc-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .proc-num {
+      width: 68px; height: 68px;
+      background: rgba(255,255,255,0.06); border: 2px solid rgba(94,234,212,0.3);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 22px; font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem; font-weight: 700; color: #5EEAD4; transition: 0.3s;
+    }
+    .proc-step:hover .proc-num { background: var(--green); border-color: var(--green); color: #fff; }
+    .proc-step h4 { color: #fff; font-size: 0.95rem; margin-bottom: 8px; }
+    .proc-step p  { color: rgba(255,255,255,0.5); font-size: 0.84rem; line-height: 1.6; }
+
+    /* ── WHY MECHANIM ── */
+    .why-anim { padding: 80px 0; background: #fff; }
+    .why-anim .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .why-anim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .why-anim-img { border-radius: 20px; overflow: hidden; position: relative; }
+    .why-anim-img img { width: 100%; height: 400px; object-fit: cover; border-radius: 20px; display: block; }
+    .why-anim-img-badge {
+      position: absolute; bottom: 20px; left: 20px;
+      background: rgba(11,31,58,0.9); backdrop-filter: blur(12px);
+      color: rgba(255,255,255,0.8); font-size: 0.8rem;
+      padding: 12px 18px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1); line-height: 1.5;
+    }
+    .why-anim-img-badge strong { display: block; color: #5EEAD4; font-size: 0.9rem; margin-bottom: 2px; }
+    .why-points { display: flex; flex-direction: column; gap: 20px; margin-top: 8px; }
+    .why-point {
+      display: flex; gap: 16px; padding: 20px;
+      background: #F8FAFB; border-radius: 14px;
+      border: 1px solid rgba(11,31,58,0.06); transition: 0.3s;
+    }
+    .why-point:hover { border-color: var(--green); background: #fff; box-shadow: 0 8px 24px rgba(11,31,58,0.08); }
+    .why-point-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: rgba(15,118,110,0.1); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green); margin-top: 2px; transition: 0.3s;
+    }
+    .why-point:hover .why-point-icon { background: var(--green); color: #fff; }
+    .why-point h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 4px; }
+    .why-point p  { color: var(--muted); font-size: 0.87rem; line-height: 1.6; margin: 0; }
+
+    /* ── PARTNER SECTION ── */
+    .partner-section { padding: 70px 0; background: var(--navy); text-align: center; }
+    .partner-section .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+    .partner-logo-wrap {
+      display: inline-flex; align-items: center; gap: 14px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      padding: 14px 28px; border-radius: 14px; margin-bottom: 24px;
+    }
+    .partner-logo-dot {
+      width: 36px; height: 36px; background: var(--green); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .partner-logo-dot svg { color: #fff; }
+    .partner-logo-name { font-size: 1.1rem; font-weight: 700; color: #fff; }
+    .partner-section h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 14px; }
+    .partner-section p  { color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 32px; font-size: 0.96rem; }
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #5EEAD4; color: var(--navy); font-weight: 700;
+      font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: 0.3s ease;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(94,234,212,0.4); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .application-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .why-anim-grid { grid-template-columns: 1fr; gap: 36px; }
+      .why-anim-img img { height: 280px; }
+      .process-steps-anim { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .process-steps-anim::before { display: none; }
+      .video-strip { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 600px) {
+      .application-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .process-steps-anim { grid-template-columns: 1fr; }
+      .anim-hero-content { padding: 100px 18px 60px; }
+    }
+    @media (max-width: 480px) {
+      .anim-hero-content { padding: 80px 16px 48px; }
+      .why-anim-img { display: none; }
+      .why-anim-grid { grid-template-columns: 1fr; }
+      .why-point { padding: 14px 12px; }
+      .partner-logo-wrap { flex-wrap: wrap; justify-content: center; }
+      .video-strip { padding: 0 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Efficient Solutions Home">
+      <img src="logo.png" alt="Efficient Solutions Logo" width="180" height="52" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html"    data-i18n="nav.about">About Us</a></li>
+      <li><a href="products.html" data-i18n="nav.products" class="active">Products</a></li>
+      <li><a href="contact.html"  data-i18n="nav.contact">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn"        data-lang="ar" aria-pressed="false">AR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get in Touch</a>
+      <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html"    data-i18n="nav.home">Home</a>
+  <a href="about.html"    data-i18n="nav.about">About Us</a>
+  <a href="products.html" data-i18n="nav.products" class="active">Products</a>
+  <a href="contact.html"  data-i18n="nav.contact">Contact Us</a>
+  <div class="mobile-nav-footer">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="ar">AR</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="font-size:0.82rem;padding:10px 18px;" data-i18n="nav.cta">Get in Touch</a>
+  </div>
+</nav>
+
+
+<!-- ── HERO ── -->
+<section class="anim-hero" aria-label="Engineering Animation hero">
+  <div class="anim-hero-bg" role="presentation"></div>
+  <div class="anim-hero-content">
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <span aria-hidden="true">›</span>
+      <span style="color:rgba(255,255,255,0.7)" data-i18n="anim.breadcrumb">Engineering Animation</span>
+    </nav>
+
+    <span class="hero-eyebrow" data-i18n="anim.hero.tag">3D Visualization</span>
+
+    <h1>
+      <span data-i18n="anim.hero.h1a">Engineering Animation</span><br />
+      <span class="teal" data-i18n="anim.hero.h1b">&amp; 3D Visualization</span>
+    </h1>
+
+    <p class="anim-hero-desc" data-i18n="anim.hero.desc">
+      Transforming complex engineering concepts into clear, compelling 3D animations for training, sales, and technical communication — brought to Saudi Arabia in partnership with Mechanim.
+    </p>
+
+    <div class="hero-partner-badge">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      <span data-i18n="anim.hero.partner">Official partner of Mechanim — Industrial Animation Studio</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── VIDEO STRIP ── -->
+<div class="video-strip">
+
+  <!-- Video 1: Mechanim Showreel 2025 -->
+  <div class="video-card">
+    <div class="video-card-embed">
+      <iframe
+        src="https://www.youtube.com/embed/2Z8pUoBBxQM?rel=0&modestbranding=1&color=white"
+        title="3D Industrial Animation Showreel 2025 — Mechanim"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="video-card-label">
+      <div class="video-card-icon" aria-hidden="true">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="video-card-text">
+        <strong data-i18n="anim.video1.title">3D Industrial Animation Showreel 2025</strong>
+        <span data-i18n="anim.video1.sub">Engineering Animation Services</span>
+      </div>
+      <a class="video-card-yt" href="https://www.youtube.com/watch?v=2Z8pUoBBxQM" target="_blank" rel="noopener" aria-label="Watch on YouTube">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        YouTube
+      </a>
+    </div>
+  </div>
+
+  <!-- Video 2: Mechanim Industrial Animation Showreel -->
+  <div class="video-card">
+    <div class="video-card-embed">
+      <iframe
+        src="https://www.youtube.com/embed/NfjhGRdLYEw?rel=0&modestbranding=1&color=white"
+        title="Industrial Animation Showreel — Mechanim"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="video-card-label">
+      <div class="video-card-icon" aria-hidden="true">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div class="video-card-text">
+        <strong data-i18n="anim.video2.title">Industrial Animation Showreel</strong>
+        <span data-i18n="anim.video2.sub">Technical &amp; 3D Animation Portfolio</span>
+      </div>
+      <a class="video-card-yt" href="https://www.youtube.com/watch?v=NfjhGRdLYEw" target="_blank" rel="noopener" aria-label="Watch on YouTube">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        YouTube
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ── WHAT WE DELIVER ── -->
+<section class="anim-section reveal" aria-labelledby="anim-what-h2">
+  <div class="container">
+
+    <span class="section-eyebrow" data-i18n="anim.what.eyebrow">What We Deliver</span>
+    <h2 id="anim-what-h2" class="section-heading" data-i18n="anim.what.h2">Six Ways Animation Elevates Your Business</h2>
+    <p class="section-sub" data-i18n="anim.what.p">Mechanim is a team of mechanical engineers turned animators — meaning every visualization is technically accurate, not just visually impressive. Through Efficient Solutions, Saudi companies get this expertise locally.</p>
+
+    <div class="application-grid">
+
+      <div class="app-card reveal">
+        <div class="app-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 data-i18n="anim.app1.h3">Product Design &amp; Development</h3>
+        <p data-i18n="anim.app1.p">Visualize and validate industrial product designs before manufacturing — reducing costly rework and accelerating time-to-market.</p>
+      </div>
+
+      <div class="app-card reveal">
+        <div class="app-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3 data-i18n="anim.app2.h3">Manufacturing &amp; Assembly</h3>
+        <p data-i18n="anim.app2.p">Simplify complex assembly sequences with step-by-step 3D animations — eliminating language barriers in multi-national plant teams.</p>
+      </div>
+
+      <div class="app-card reveal">
+        <div class="app-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <h3 data-i18n="anim.app3.h3">Safety &amp; Employee Training</h3>
+        <p data-i18n="anim.app3.p">Replace costly physical demonstrations with interactive 3D training modules — particularly valuable for high-risk oil &amp; gas environments in Saudi Arabia.</p>
+      </div>
+
+      <div class="app-card reveal">
+        <div class="app-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 data-i18n="anim.app4.h3">Marketing &amp; Sales</h3>
+        <p data-i18n="anim.app4.p">Differentiate your product in tender submissions and trade shows with cinematic 3D renders and animated product showcases that competitors can't match.</p>
+      </div>
+
+      <div class="app-card reveal">
+        <div class="app-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 11-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+        </div>
+        <h3 data-i18n="anim.app5.h3">Maintenance &amp; Troubleshooting</h3>
+        <p data-i18n="anim.app5.p">Deliver clear visual maintenance guides that reduce downtime and enable field technicians to diagnose faults without specialist support.</p>
+      </div>
+
+      <div class="app-card reveal">
+        <div class="app-card-icon" aria-hidden="true">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h3 data-i18n="anim.app6.h3">Architecture &amp; Civil Engineering</h3>
+        <p data-i18n="anim.app6.p">Visualize large-scale construction projects, infrastructure, and industrial facilities before a single brick is laid — ideal for investor presentations and government approvals.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PROJECT GALLERY ── -->
+<section class="anim-gallery reveal" aria-labelledby="anim-gallery-h2">
+  <div class="container">
+
+    <span class="section-eyebrow" data-i18n="anim.showcase.eyebrow">Project Showcase</span>
+    <h2 id="anim-gallery-h2" class="section-heading" data-i18n="anim.showcase.h2">Animation in Action</h2>
+    <p class="section-sub" data-i18n="anim.showcase.p">A glimpse into the quality of 3D industrial animation delivered by Mechanim for clients across the globe.</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card reveal">
+        <img src="https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render.png" alt="Precision machine 3D render by Mechanim" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="anim.gallery.tag1">3D Industrial Render</div>
+          <div data-i18n="anim.gallery.name1">Precision Machine Visualization</div>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&q=80" alt="Industrial process simulation animation" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="anim.gallery.tag2">Process Simulation</div>
+          <div data-i18n="anim.gallery.name2">Plant-Level Flow Animation</div>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=800&q=80" alt="Engineering assembly animation" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="anim.gallery.tag3">Assembly Animation</div>
+          <div data-i18n="anim.gallery.name3">Step-by-Step Build Sequence</div>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&q=80" alt="Technical safety training animation" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="anim.gallery.tag4">Training Module</div>
+          <div data-i18n="anim.gallery.name4">Safety &amp; Operations Walkthrough</div>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Photorealistic 3D product demo" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="anim.gallery.tag5">Product Demo</div>
+          <div data-i18n="anim.gallery.name5">Photorealistic Product Showcase</div>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Industrial facility virtual tour animation" loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="anim.gallery.tag6">Facility Walkthrough</div>
+          <div data-i18n="anim.gallery.name6">Virtual Plant Tour Animation</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── HOW IT WORKS ── -->
+<section class="process-section reveal" aria-labelledby="anim-process-h2">
+  <div class="container">
+
+    <span class="section-eyebrow" data-i18n="anim.process.eyebrow">How It Works</span>
+    <h2 id="anim-process-h2" class="section-heading" data-i18n="anim.process.h2">From Concept to Final Animation</h2>
+    <p class="section-sub" data-i18n="anim.process.p">A streamlined four-step process — coordinated by Efficient Solutions between you and Mechanim's studio team.</p>
+
+    <div class="process-steps-anim">
+
+      <div class="proc-step reveal">
+        <div class="proc-num">01</div>
+        <h4 data-i18n="anim.proc1.h4">Brief &amp; Scope</h4>
+        <p data-i18n="anim.proc1.p">We gather your CAD files, use-case objectives, and target audience to define the animation scope.</p>
+      </div>
+
+      <div class="proc-step reveal">
+        <div class="proc-num">02</div>
+        <h4 data-i18n="anim.proc2.h4">3D Modelling</h4>
+        <p data-i18n="anim.proc2.p">Mechanim's engineers build or refine the 3D model with engineering precision, ensuring technical accuracy.</p>
+      </div>
+
+      <div class="proc-step reveal">
+        <div class="proc-num">03</div>
+        <h4 data-i18n="anim.proc3.h4">Animation &amp; Review</h4>
+        <p data-i18n="anim.proc3.p">Motion, lighting, and rendering are finalized. You review and approve at each milestone.</p>
+      </div>
+
+      <div class="proc-step reveal">
+        <div class="proc-num">04</div>
+        <h4 data-i18n="anim.proc4.h4">Delivery &amp; Support</h4>
+        <p data-i18n="anim.proc4.p">Final files delivered in your required format — MP4, WebGL, or interactive viewer — with revisions included.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── WHY MECHANIM ── -->
+<section class="why-anim reveal" aria-labelledby="anim-why-h2">
+  <div class="container">
+    <div class="why-anim-grid">
+
+      <div class="why-anim-img reveal-left">
+        <img src="https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render-1024x576.png" alt="Mechanim 3D industrial animation studio" loading="lazy" />
+        <div class="why-anim-img-badge">
+          <strong data-i18n="anim.studio.label">Mechanim Studio</strong>
+          <span data-i18n="anim.studio.sub">Team of Mechanical Engineers</span>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <span class="section-eyebrow" data-i18n="anim.why.eyebrow">Why Mechanim</span>
+        <h2 id="anim-why-h2" class="section-heading" data-i18n="anim.why.h2">Engineering Accuracy Meets Creative Excellence</h2>
+        <p style="color:var(--muted);font-size:0.94rem;line-height:1.7;margin-bottom:24px;" data-i18n="anim.why.p">Unlike generic animation studios, Mechanim's team are qualified mechanical engineers — they understand tolerances, flow dynamics, and assembly logic. This means animations that are trusted by engineers, not just admired by marketing teams.</p>
+
+        <div class="why-points">
+
+          <div class="why-point">
+            <div class="why-point-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="anim.why1.h4">Engineering Expertise</h4>
+              <p data-i18n="anim.why1.p">Animations built by engineers who understand complex systems — not just artists following briefs.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="anim.why2.h4">Tailored Solutions</h4>
+              <p data-i18n="anim.why2.p">Every animation is customized to your industry, audience, and specific communication goal.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="anim.why3.h4">Global References</h4>
+              <p data-i18n="anim.why3.p">Proven track record with industrial clients across multiple countries and sectors.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:32px;">
+          <a href="contact.html" class="btn btn-primary">
+            <span data-i18n="anim.why.cta">Start Your Project →</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PARTNER SECTION ── -->
+<section class="partner-section reveal" aria-labelledby="anim-partner-h2">
+  <div class="container">
+
+    <div class="partner-logo-wrap">
+      <div class="partner-logo-dot" aria-hidden="true">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <span class="partner-logo-name">MECHANIM</span>
+    </div>
+
+    <h2 id="anim-partner-h2" data-i18n="anim.partner.title">In Partnership With Mechanim</h2>
+    <p data-i18n="anim.partner.desc">Mechanim is a specialist 3D industrial animation studio run by mechanical engineers. Their mission — simplifying the complex through engaging visual solutions — maps directly onto Saudi Arabia's need to communicate technical concepts across multinational, multilingual workforces. Through Efficient Solutions, this expertise is now accessible in the Kingdom.</p>
+
+    <a href="contact.html" class="btn-cta">
+      <span data-i18n="anim.partner.cta">Request an Animation Quote</span>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="logo.png" alt="Efficient Solutions" class="brand-logo" width="160" height="46" loading="lazy" />
+        <p data-i18n="footer.desc">Your strategic gateway to Saudi Arabia's engineering and industrial landscape.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/efficientsolutions.sa" class="social-link" aria-label="Instagram">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.company">Company</h5>
+        <ul>
+          <li><a href="index.html"    data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html"    data-i18n="nav.about">About Us</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="contact.html"  data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.connect">Connect</h5>
+        <div class="footer-contact-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <a href="mailto:yousef.es@efficientsolutionsksa.com">yousef.es@efficientsolutionsksa.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <a href="tel:+966504810549">+966 (0)50 481 0549</a>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span>Eastern Province, Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">&copy; 2025 Efficient Solutions. All rights reserved.</span>
+      <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("xCVuhtk00wHM7dSGV");</script>
+
+<!-- Main script -->
+<script src="script.js"></script>
+
+</body>
+</html>
