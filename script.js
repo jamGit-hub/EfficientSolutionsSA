@@ -130,7 +130,7 @@ const translations = {
     'contact.email':    'Email Us',
     'contact.phone':    'Call Us',
     'contact.office':   'Our Location',
-    'contact.email.val': 'yousef.es@efficientsolutionsksa.com',
+    'contact.email.val': 'Sales@efficientsolutionsksa.com',
     'contact.phone.val': '+996 (0)50 481 0549',
     'contact.office.val':'Alkhobar, Eastern Province, Kingdom of Saudi Arabia',
     'contact.form.h3':  'Send Us a Message',
@@ -226,11 +226,11 @@ const translations = {
 
 'about.team.card3.title': 'Global Network',
 'about.team.card3.desc': 'Through our international partnerships, we connect global businesses with opportunities in Saudi Arabia\'s growing engineering and industrial sectors.',
-'timeline.may.year':    'May 2025',
+'timeline.may.year':    'May 2026',
 'timeline.may.title':   'Foundations Established',
 'timeline.may.desc':    'The groundwork for Efficient Solutions was laid — defining the company\'s strategic direction, operational framework, and long-term goals through a rigorous planning and structuring process.',
 
-'timeline.june.year':   'June 2025',
+'timeline.june.year':   'June 2026',
 'timeline.june.title':  'First Partnerships Secured',
 'timeline.june.desc':   'Efficient Solutions commenced active operations, formalizing agreements with international partners and beginning to guide the first clients through their entry into the Saudi market.',
 
@@ -631,7 +631,7 @@ const translations = {
     'contact.email':    'راسلنا',
     'contact.phone':    'اتصل بنا',
     'contact.office':   'موقعنا',
-    'contact.email.val': 'yousef.es@efficientsolutionsksa.com',
+    'contact.email.val': 'Sales@efficientsolutionsksa.com',
     'contact.phone.val': '+996 (0)50 481 0549',
     'contact.office.val':'الخبر، المنطقة الشرقية، المملكة العربية السعودية',
     'contact.form.h3':  'أرسل لنا رسالة',
@@ -727,11 +727,11 @@ const translations = {
 'about.team.card3.title': 'شبكة عالمية',
 'about.team.card3.desc': 'من خلال شراكاتنا الدولية، نربط الشركات العالمية بفرص النمو في قطاع الهندسة والصناعة المتنامي في المملكة.',
  
-'timeline.may.year':    'مايو 2025',
+'timeline.may.year':    'مايو 2026',
     'timeline.may.title':   'وضع الأسس',
     'timeline.may.desc':    'انطلق العمل على تأسيس إفيشنت سوليوشنز من خلال وضع التوجه الاستراتيجي والإطار التشغيلي وتحديد الأهداف بعيدة المدى، في مرحلة تخطيط وهيكلة دقيقة.',
  
-    'timeline.june.year':   'يونيو 2025',
+    'timeline.june.year':   'يونيو 2026',
     'timeline.june.title':  'إبرام أولى الشراكات',
     'timeline.june.desc':   'انطلقت إفيشنت سوليوشنز في عملياتها الفعلية، وأبرمت اتفاقيات رسمية مع شركاء دوليين، وبدأت مرافقة أولى الشركات في رحلتها للدخول إلى السوق السعودي.',
  
