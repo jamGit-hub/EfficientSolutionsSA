@@ -166,7 +166,7 @@ const translations = {
     'contact.tab.business':    'Business & Consulting',
     'contact.tab.business.sub':'Market entry, partnerships, advisory',
     'contact.tab.product':     'Product Order / Quote',
-    'contact.tab.product.sub': 'Mechanical seals, engineering animation',
+    'contact.tab.product.sub': 'Engineering animation & more',
     'contact.opt':             '(optional)',
     'contact.biz.h3':          'Business & Consulting Enquiry',
     'contact.biz.p':           'Tell us about your company and goals — we\'ll come back with a clear path forward.',
@@ -504,7 +504,16 @@ const translations = {
 
     "seals.partner.title": "In Partnership With Lineproof Engineering",
     "seals.partner.desc": "Founded in 2002, Lineproof Engineering is a leading manufacturer of mechanical seals and rotary sealing solutions with over 30 years of collective experience. Our exclusive partnership brings their world-class sealing technology directly to Saudi Arabia — with local sourcing, Arabic-language support, and fast in-Kingdom delivery.",
-    "seals.partner.cta": "Enquire About Seals"
+    "seals.partner.cta": "Enquire About Seals",
+
+    /* Products page — category accordions */
+    "prod.cat.mechanical":     "Mechanical",
+    "prod.cat.mechanical.sub": "Machinery & Fabrication",
+    "prod.cat.electrical":     "Electrical",
+    "prod.cat.electrical.sub": "Power & Automation",
+    "prod.cat.instrumental":   "Instrumental",
+    "prod.cat.instrumental.sub": "Measurement & Control",
+    "prod.cat.coming":         "Products coming soon — check back shortly."
   },
 
   ar: {
@@ -666,7 +675,7 @@ const translations = {
     'contact.tab.business':    'الأعمال والاستشارات',
     'contact.tab.business.sub':'دخول السوق، الشراكات، الاستشارات',
     'contact.tab.product':     'طلب منتج / عرض سعر',
-    'contact.tab.product.sub': 'الأختام الميكانيكية، الرسوم الهندسية',
+    'contact.tab.product.sub': 'الرسوم الهندسية والمزيد',
     'contact.opt':             '(اختياري)',
     'contact.biz.h3':          'استفسار الأعمال والاستشارات',
     'contact.biz.p':           'أخبرنا عن شركتك وأهدافك — وسنعود بمسار واضح للمضي قدماً.',
@@ -1004,7 +1013,16 @@ const translations = {
 
     "seals.partner.title": "بشراكة مع Lineproof Engineering",
     "seals.partner.desc": "تأسست Lineproof Engineering عام 2002، وهي من الشركات الرائدة في تصنيع الأختام الميكانيكية وحلول الإحكام الدوارة بخبرة جماعية تتجاوز 30 عاماً. تجلب شراكتنا الحصرية تقنياتهم العالمية مباشرةً إلى المملكة — مع توفر محلي ودعم باللغة العربية وتسليم سريع داخل المملكة.",
-    "seals.partner.cta": "الاستفسار عن الأختام"
+    "seals.partner.cta": "الاستفسار عن الأختام",
+
+    /* Products page — category accordions */
+    "prod.cat.mechanical":     "ميكانيكا",
+    "prod.cat.mechanical.sub": "الآلات والتصنيع",
+    "prod.cat.electrical":     "كهرباء",
+    "prod.cat.electrical.sub": "الطاقة والأتمتة",
+    "prod.cat.instrumental":   "أجهزة وقياس",
+    "prod.cat.instrumental.sub": "القياس والتحكم",
+    "prod.cat.coming":         "منتجات قادمة قريباً."
   }
   
 };
@@ -1195,6 +1213,17 @@ function initSmoothScroll() {
   });
 }
 
+/* ── Product Category Accordions ──────────────────────────── */
+function initProductAccordions() {
+  $$('.cat-accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const accordion = header.closest('.cat-accordion');
+      const isOpen = accordion.classList.toggle('open');
+      header.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+}
+
 /* ── Boot ─────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   applyLanguage(currentLang);
@@ -1206,6 +1235,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initContactForm();
   initSmoothScroll();
+  initProductAccordions();
 });
 
 /* ── Tab switching ────────────────────────────────────────── */
@@ -1221,18 +1251,21 @@ function switchTab(type) {
   document.getElementById('form-' + type).classList.add('active');
 }
 
-/* ── Show/hide product-specific fields ───────────────────── */
-function toggleProductFields(val) {
-  const sealVals = ['single-seal','dual-cartridge','metal-bellows','dry-running',
-                    'reactor-agitator','split-seal','seal-support','seals-other'];
-  const animVals = ['product-animation','process-animation','training-animation',
-                    'marketing-animation','maintenance-animation','animation-other'];
-
-  const sf = document.getElementById('seal-fields');
-  const af = document.getElementById('animation-fields');
-
-  sf.style.display = sealVals.includes(val) ? 'block' : 'none';
-  af.style.display = animVals.includes(val) ? 'block' : 'none';
+/* ── Product fields toggle ────────────────────────────────
+   Each <option> carries data-fields="div-id" pointing to its
+   extra fields block. All .product-fields divs are hidden first,
+   then the matching one is shown. To add a new product type:
+     1. Add <option data-fields="your-new-div-id"> in the select
+     2. Add <div id="your-new-div-id" class="product-fields" style="display:none;">
+   No JS changes needed.
+─────────────────────────────────────────────────────────── */
+function toggleProductFields(select) {
+  document.querySelectorAll('.product-fields').forEach(el => el.style.display = 'none');
+  const fieldsId = select.options[select.selectedIndex]?.dataset.fields;
+  if (fieldsId) {
+    const el = document.getElementById(fieldsId);
+    if (el) el.style.display = 'block';
+  }
 }
 
 /* ── Form submission helper ──────────────────────────────── */
