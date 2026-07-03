@@ -1216,10 +1216,17 @@ function initSmoothScroll() {
 /* ── Product Category Accordions ──────────────────────────── */
 function initProductAccordions() {
   $$('.cat-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
+    header.setAttribute('tabindex', '0');
+
+    const toggle = () => {
       const accordion = header.closest('.cat-accordion');
       const isOpen = accordion.classList.toggle('open');
       header.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
     });
   });
 }
