@@ -511,7 +511,7 @@ const translations = {
     "prod.cat.mechanical.sub": "Machinery & Fabrication",
     "prod.cat.electrical":     "Electrical",
     "prod.cat.electrical.sub": "Power & Automation",
-    "prod.cat.instrumental":   "Instrumental",
+    "prod.cat.Instrumentation":   "Instrumentation",
     "prod.cat.instrumental.sub": "Measurement & Control",
     "prod.cat.coming":         "Products coming soon — check back shortly."
   },
@@ -1020,7 +1020,7 @@ const translations = {
     "prod.cat.mechanical.sub": "الآلات والتصنيع",
     "prod.cat.electrical":     "كهرباء",
     "prod.cat.electrical.sub": "الطاقة والأتمتة",
-    "prod.cat.instrumental":   "أجهزة وقياس",
+    "prod.cat.Instrumentation":   "أجهزة وقياس",
     "prod.cat.instrumental.sub": "القياس والتحكم",
     "prod.cat.coming":         "منتجات قادمة قريباً."
   }
