@@ -461,37 +461,87 @@
       .cat-accordion-header { padding: 18px 20px; }
       .cat-accordion.open .cat-body { padding: 20px 20px 28px; }
       .cat-sub { display: none; }
+
+      
+    }
+
+
+    /* DROPDOWN MENU */
+    .nav-dropdown { 
+      position: relative; }
+    .dropdown-menu { 
+      display: none; position: absolute; top: 100%; 
+      left: 0; background: #fff;
+       border-radius: 8px; 
+      
+      box-shadow: 0 4px 12px rgba(11,31,58,0.15); 
+      list-style: none; padding: 8px 0; min-width:
+       180px; z-index: 1000; 
+      }
+    .nav-dropdown:hover .dropdown-menu,
+
+    .nav-dropdown.active .dropdown-menu { 
+      display: block;
+    }
+    .dropdown-menu li {
+       padding: 0; 
+      }
+    .dropdown-menu li a { 
+      display: block; padding: 10px 16px; color: #0B1F3A; text-decoration: none; 
+      font-size: 0.93rem; transition: background 0.2s ease; }
+    .dropdown-menu li a:hover {
+       background: #F8FAFB; 
+       color: #0f766e; }
+
+
+    @media (max-width: 768px) {
+      .nav-dropdown.active .dropdown-menu { display: block; }
+      .nav-dropdown:hover .dropdown-menu { display: none; }
+
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Efficient Solutions Home">
-        <img src="logo.png" alt="Efficient Solutions Logo" width="180" height="52" />
-      </a>
-      <ul class="nav-links" role="list">
-        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-        <li><a href="products.html" data-i18n="nav.products" class="active">Products</a></li>
-        <li>   <a href="servcies.html" data-i18n="nav.services" >Services</a>
-        </li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
-      </ul>
-      <div class="nav-actions">
-        <div class="lang-toggle" role="group" aria-label="Language selection">
-          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
-        </div>
-        <a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get in Touch</a>
-        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-          <span></span><span></span><span></span>
-        </button>
+ <!-- NAVIGATION -->
+ <nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Efficient Solutions Home">
+      <img src="logo.png" alt="Efficient Solutions Logo" width="180" height="52" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+      <li class="nav-dropdown">
+        <a href="products.html" data-i18n="nav.products" class="active">Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="products.html?section=mechanical">Mechanical</a></li>
+          <li><a href="products.html?section=electrical">Electrical</a></li>
+          <li><a href="products.html?section=instrumental">Control & Instrumentation</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="servcies.html" data-i18n="nav.services">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="servcies.html?section=mechanical">Mechanical</a></li>
+          <li><a href="servcies.html?section=electrical">Electrical</a></li>
+          <li><a href="servcies.html?section=instrumental">Control & Instrumentation</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
       </div>
+      <a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get in Touch</a>
+      <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
   <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
@@ -531,7 +581,7 @@
       <div class="hero-stats">
   
         <div class="hero-stat">
-          <strong>4</strong>
+          <strong>5</strong>
           <span data-i18n="prod.hero.stat1">Product Lines</span>
         </div>
   
@@ -569,10 +619,11 @@
   
       </div>
   
+   
       <!-- ══ MECHANICAL ══════════════════════════════════════ -->
-      <div class="cat-accordion open" id="cat-mechanical">
-
-        <div class="cat-accordion-header" role="button" aria-expanded="true" aria-controls="body-mechanical">
+      <div class="cat-accordion" id="cat-mechanical">
+ 
+        <div class="cat-accordion-header" role="button" aria-expanded="false" aria-controls="body-mechanical">
           <div class="cat-left">
             <div class="cat-icon">
               <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -586,19 +637,17 @@
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </div>
         </div>
-
+ 
         <div class="cat-body" id="body-mechanical">
           <div class="products-grid-v2">
-
+ 
             <!-- Engineering Animation -->
             <a href="product-engAnimation.html" class="pcard">
               <div class="pcard-img-wrap">
-                <img src="https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render.png" alt="Engineering Animation" />
-                <div class="pcard-img-overlay"></div>
+                <img src="https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render.png" alt="Engineering Animation" />                <div class="pcard-img-overlay"></div>
                 <span class="pcard-badge" data-i18n="prod.anim.badge">3D Visualization</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner" data-i18n="prod.anim.partner">Partner Technology</span>
                 <h2 data-i18n="prod.animation.title">Engineering Animation</h2>
                 <p data-i18n="prod.animation.desc">Advanced 3D engineering visualization and industrial simulation — bringing complex systems to life for training, presentations, and technical review.</p>
                 <div class="pcard-footer">
@@ -610,18 +659,19 @@
                 </div>
               </div>
             </a>
-            <a href="#" class="pcard">
+
+
+            <a href="product-marine spare parts.html" class="pcard">
               <div class="pcard-img-wrap">
                 <img src="https://images.pexels.com/photos/16482911/pexels-photo-16482911.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Marine engine spare parts" />
                 <div class="pcard-img-overlay"></div>
                 <span class="pcard-badge">Marine Supply</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Korean Marine Partner — Busan</span>
-                <h2>Marine Spare Parts Sourcing</h2>
+                <h2>Marine Spare Parts</h2>
                 <p>Reliable sourcing of marine spare parts including main and auxiliary engine components, turbochargers, pumps, purifiers, compressors, valves, instrumentation, electrical and deck machinery, and safety items.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Explore Product</span>
+                  <span class="pcard-link" data-i18n="prod.anim.link">Explore Product</span>
                   <div class="pcard-tags">
                     <span class="pcard-tag">Engine Parts</span>
                     <span class="pcard-tag">Deck & Safety</span>
@@ -637,11 +687,10 @@
                 <span class="pcard-badge">Forging</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Korean Forging Partner</span>
                 <h2>Precision Steel Forging</h2>
                 <p>Custom forged steel components for ship engine parts, industrial machinery, and power generation equipment, produced to strict quality and inspection standards.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Explore Product</span>
+                  <span class="pcard-link" data-i18n="prod.anim.link">Explore Product</span>
                   <div class="pcard-tags">
                     <span class="pcard-tag">Ship Engine Parts</span>
                     <span class="pcard-tag">Industrial Machinery</span>
@@ -649,6 +698,31 @@
                 </div>
               </div>
             </a>
+
+
+            <!-- Mechanical Seals -->
+            <a href="product-seals.html" class="pcard">
+              <div class="pcard-img-wrap">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMezH-TsL06SgPzG6YID1EXkgu8VN6-b4eXIWsqXd8y10i1a739iTa1T1S&s=10" alt="Mechanical seals for pumps and agitators"
+                     onerror="this.src='https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1200'" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge">Mechanical Seals</span>
+              </div>
+              <div class="pcard-body">
+                <h2>Mechanical Seals for Pumps &amp; Agitators &amp; Seal Support Systems</h2>
+                <p>Complete sealing solutions for rotating equipment — single, dual, and metal bellows mechanical seals for industrial pumps and agitators, paired with API 682 seal support systems including flush plans, barrier fluid panels, and monitoring instrumentation.</p>
+                <div class="pcard-footer">
+                  <span class="pcard-link" data-i18n="prod.anim.link">Explore Product</span>
+                  </span>
+                  <div class="pcard-tags">
+                    <span class="pcard-tag">API 682</span>
+                    <span class="pcard-tag">Pumps &amp; Agitators</span>
+                    <span class="pcard-tag">Seal Support</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
             <!--
             PLACEHOLDER — Mechanical Product 2
             Duplicate and fill in the block below when ready:
@@ -707,18 +781,17 @@
           <div class="products-grid-v2">
 
 
-            <a href="#" class="pcard">
+            <a href="product-industrial control transformers.html" class="pcard">
               <div class="pcard-img-wrap">
                 <img src="https://www.samwootr.com/img/main/ms01Item01.jpg" alt="Industrial control transformer" />
                 <div class="pcard-img-overlay"></div>
                 <span class="pcard-badge">Power Solutions</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Korean Manufacturing Partner</span>
                 <h2>Industrial Control Transformers</h2>
                 <p>Customized control transformers and power solutions engineered for industrial applications, built to CE and ISO 9001 standards with support for low-volume, custom-spec orders.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Explore Product</span>
+                  <span class="pcard-link" data-i18n="prod.anim.link">Explore Product</span>
                   <div class="pcard-tags">
                     <span class="pcard-tag">Control Transformers</span>
                     <span class="pcard-tag">Custom Power</span>
@@ -771,7 +844,7 @@
               <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
             </div>
             <div>
-              <div class="cat-title" data-i18n="prod.cat.Instrumentation">Instrumentation</div>
+              <div class="cat-title" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</div>
               <div class="cat-sub" data-i18n="prod.cat.instrumental.sub">Measurement &amp; Control</div>
             </div>
           </div>

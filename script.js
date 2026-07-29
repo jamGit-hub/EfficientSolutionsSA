@@ -312,7 +312,7 @@ const translations = {
       "prod.intro.desc": "Each solution is backed by international expertise and tailored to the demands of Saudi Arabia's rapidly growing industrial sector.",
     
       "prod.anim.badge": "3D Visualization",
-      "prod.anim.partner": "Partner Technology",
+      "prod.anim.partner": "Efficient Solutions",
       "prod.animation.title": "Engineering Animation",
       "prod.animation.desc": "Advanced 3D engineering visualization and industrial simulation — bringing complex systems to life for training, presentations, and technical review.",
       "prod.anim.link": "Explore Product",
@@ -332,7 +332,7 @@ const translations = {
       "trust.t2": "Eastern Province",
       "trust.t3": "Certified Partners",
       "trust.t4": "Technical Support",
-      "anim.partner.badge":" Official partner of MECHANIM",
+      "anim.partner.badge": "Engineering Animation",
 
 
       /* ── Engineering Animation page ── */
@@ -340,8 +340,8 @@ const translations = {
       "anim.hero.title":       "Engineering Animation & 3D Visualization",
       "anim.hero.h1a":         "Engineering Animation",
       "anim.hero.h1b":         "& 3D Visualization",
-      "anim.hero.partner":     "Official partner of Mechanim — Industrial Animation Studio",
-      "anim.hero.desc":        "Transforming complex engineering concepts into clear, compelling 3D animations for training, sales, and technical communication — brought to Saudi Arabia in partnership with Mechanim.",
+      "anim.hero.partner":     "Efficient Solutions — Engineering Animation Studio",
+      "anim.hero.desc":        "Transforming complex engineering concepts into clear, compelling 3D animations for training, sales, and technical communication — delivered by our in-house engineering animation team.",
       "anim.breadcrumb":       "Engineering Animation",
 
       "anim.video1.title":     "3D Industrial Animation Showreel 2025",
@@ -352,7 +352,7 @@ const translations = {
       "anim.what.title":       "What We Deliver",
       "anim.what.eyebrow":     "What We Deliver",
       "anim.what.h2":          "Six Ways Animation Elevates Your Business",
-      "anim.what.p":           "Mechanim is a team of mechanical engineers turned animators — meaning every visualization is technically accurate, not just visually impressive. Through Efficient Solutions, Saudi companies get this expertise locally.",
+      "anim.what.p":           "Our engineering animation team consists of qualified mechanical engineers turned animators — meaning every visualization is technically accurate, not just visually impressive. Efficient Solutions delivers this expertise directly to Saudi Arabia's industrial sector.",
 
       "anim.app1.h3":          "Product Design & Development",
       "anim.app1.p":           "Visualize and validate industrial product designs before manufacturing — reducing costly rework and accelerating time-to-market.",
@@ -369,7 +369,7 @@ const translations = {
 
       "anim.showcase.eyebrow": "Project Showcase",
       "anim.showcase.h2":      "Animation in Action",
-      "anim.showcase.p":       "A glimpse into the quality of 3D industrial animation delivered by Mechanim for clients across the globe.",
+      "anim.showcase.p":       "A glimpse into the quality of 3D industrial animation we deliver for clients across Saudi Arabia and beyond.",
 
       "anim.gallery.title":    "Project Gallery",
       "anim.g1":               "Industrial Simulation",
@@ -390,19 +390,19 @@ const translations = {
 
       "anim.process.eyebrow":  "How It Works",
       "anim.process.h2":       "From Concept to Final Animation",
-      "anim.process.p":        "A streamlined four-step process — coordinated by Efficient Solutions between you and Mechanim's studio team.",
+      "anim.process.p":        "A streamlined four-step process — fully managed by our in-house engineering animation team from brief to final delivery.",
       "anim.proc1.h4":         "Brief & Scope",
       "anim.proc1.p":          "We gather your CAD files, use-case objectives, and target audience to define the animation scope.",
       "anim.proc2.h4":         "3D Modelling",
-      "anim.proc2.p":          "Mechanim's engineers build or refine the 3D model with engineering precision, ensuring technical accuracy.",
+      "anim.proc2.p":          "Our engineers build or refine the 3D model with engineering precision, ensuring complete technical accuracy.",
       "anim.proc3.h4":         "Animation & Review",
       "anim.proc3.p":          "Motion, lighting, and rendering are finalized. You review and approve at each milestone.",
       "anim.proc4.h4":         "Delivery & Support",
       "anim.proc4.p":          "Final files delivered in your required format — MP4, WebGL, or interactive viewer — with revisions included.",
 
-      "anim.why.eyebrow":      "Why Mechanim",
+      "anim.why.eyebrow":      "Why Choose Us",
       "anim.why.h2":           "Engineering Accuracy Meets Creative Excellence",
-      "anim.why.p":            "Unlike generic animation studios, Mechanim's team are qualified mechanical engineers — they understand tolerances, flow dynamics, and assembly logic. This means animations that are trusted by engineers, not just admired by marketing teams.",
+      "anim.why.p":            "Unlike generic animation studios, our team are qualified mechanical engineers — they understand tolerances, flow dynamics, and assembly logic. This means animations that are trusted by engineers, not just admired by marketing teams.",
       "anim.why1.h4":          "Engineering Expertise",
       "anim.why1.p":           "Animations built by engineers who understand complex systems — not just artists following briefs.",
       "anim.why2.h4":          "Tailored Solutions",
@@ -411,8 +411,8 @@ const translations = {
       "anim.why3.p":           "Proven track record with industrial clients across multiple countries and sectors.",
       "anim.why.cta":          "Start Your Project →",
 
-      "anim.studio.label":     "Mechanim Studio",
-      "anim.studio.sub":       "Team of Mechanical Engineers",
+      "anim.studio.label":     "Efficient Solutions",
+      "anim.studio.sub":       "Engineering Animation Studio",
 
       "anim.i1.t": "3D Industrial Visualization",
       "anim.i1.d": "Realistic models of machines and systems.",
@@ -423,8 +423,8 @@ const translations = {
       "anim.i4.t": "Investor Presentations",
       "anim.i4.d": "High-end visuals for business pitches.",
 
-      "anim.partner.title":    "In Partnership With Mechanim",
-      "anim.partner.desc":     "Mechanim is a specialist 3D industrial animation studio run by mechanical engineers. Their mission — simplifying the complex through engaging visual solutions — maps directly onto Saudi Arabia's need to communicate technical concepts across multinational, multilingual workforces. Through Efficient Solutions, this expertise is now accessible in the Kingdom.",
+      "anim.partner.title":    "Engineering Animation by Efficient Solutions",
+      "anim.partner.desc":     "Our in-house engineering animation team consists of qualified mechanical engineers. Their mission — simplifying the complex through engaging visual solutions — maps directly onto Saudi Arabia's need to communicate technical concepts across multinational, multilingual workforces.",
       "anim.partner.cta":      "Request an Animation Quote",
 
     /* ── Seal product page ── */
@@ -511,7 +511,7 @@ const translations = {
     "prod.cat.mechanical.sub": "Machinery & Fabrication",
     "prod.cat.electrical":     "Electrical",
     "prod.cat.electrical.sub": "Power & Automation",
-    "prod.cat.Instrumentation":   "Instrumentation",
+    "prod.cat.Instrumentation":   "Control & Instrumentation",
     "prod.cat.instrumental.sub": "Measurement & Control",
     "prod.cat.coming":         "Products coming soon — check back shortly."
   },
@@ -820,7 +820,7 @@ const translations = {
         "prod.intro.desc": "كل حل مدعوم بخبرة عالمية ومصمم لتلبية احتياجات القطاع الصناعي المتنامي في السعودية.",
       
         "prod.anim.badge": "تصور ثلاثي الأبعاد",
-        "prod.anim.partner": "تقنية شراكة",
+        "prod.anim.partner": "إفيشنت سوليوشنز",
         "prod.animation.title": "الرسوم الهندسية",
         "prod.animation.desc": "تصور هندسي ثلاثي الأبعاد ومحاكاة صناعية — لتبسيط الأنظمة المعقدة للتدريب والعرض والمراجعة الفنية.",
         "prod.anim.link": "استعرض المنتج",
@@ -841,7 +841,7 @@ const translations = {
         "trust.t3": "شركاء معتمدون",
         "trust.t4": "دعم فني 24/7",
 
-        "anim.partner.badge":" شريك رسمي لـ MECHANIM",
+        "anim.partner.badge": "الرسوم الهندسية",
 
 
     /* ── صفحة الرسوم الهندسية التحريكية ── */
@@ -849,8 +849,8 @@ const translations = {
     "anim.hero.title":       "الرسوم الهندسية والتصور ثلاثي الأبعاد",
     "anim.hero.h1a":         "الرسوم الهندسية التحريكية",
     "anim.hero.h1b":         "والتصور ثلاثي الأبعاد",
-    "anim.hero.partner":     "شريك رسمي لـ Mechanim — استوديو الرسوم الصناعية",
-    "anim.hero.desc":        "تحويل المفاهيم الهندسية المعقدة إلى رسوم تحريكية ثلاثية الأبعاد واضحة ومؤثرة للتدريب والمبيعات والتواصل التقني — مُقدَّمة إلى المملكة بشراكة مع Mechanim.",
+    "anim.hero.partner":     "إفيشنت سوليوشنز — استوديو الرسوم الهندسية",
+    "anim.hero.desc":        "تحويل المفاهيم الهندسية المعقدة إلى رسوم تحريكية ثلاثية الأبعاد واضحة ومؤثرة للتدريب والمبيعات والتواصل التقني — مُقدَّمة من فريق الرسوم الهندسية الداخلي لدينا.",
     "anim.breadcrumb":       "الرسوم الهندسية التحريكية",
 
     "anim.video1.title":     "شريط عرض الرسوم الصناعية ثلاثية الأبعاد 2025",
@@ -861,7 +861,7 @@ const translations = {
     "anim.what.title":       "ما نقدمه",
     "anim.what.eyebrow":     "ما نقدمه",
     "anim.what.h2":          "ست طرق تُعزِّز الرسوم التحريكية أعمالك",
-    "anim.what.p":           "فريق Mechanim مؤلَّف من مهندسين ميكانيكيين تحوَّلوا إلى مصممي رسوم تحريكية — مما يعني أن كل تصور تقني دقيق وصحيح، لا مجرد جذاب بصرياً. من خلال إفيشنت سوليوشنز، تصل هذه الخبرة إلى الشركات السعودية.",
+    "anim.what.p":           "يتألف فريق الرسوم الهندسية لدينا من مهندسين ميكانيكيين تحوَّلوا إلى مصممي رسوم تحريكية — مما يعني أن كل تصور تقني دقيق وصحيح، لا مجرد جذاب بصرياً. تُقدِّم إفيشنت سوليوشنز هذه الخبرة مباشرةً إلى القطاع الصناعي في المملكة العربية السعودية.",
 
     "anim.app1.h3":          "تصميم المنتجات وتطويرها",
     "anim.app1.p":           "تصوُّر تصاميم المنتجات الصناعية والتحقق منها قبل التصنيع — للحد من إعادة العمل المكلفة وتسريع وصول المنتج إلى السوق.",
@@ -878,7 +878,7 @@ const translations = {
 
     "anim.showcase.eyebrow": "عرض المشاريع",
     "anim.showcase.h2":      "الرسوم التحريكية على أرض الواقع",
-    "anim.showcase.p":       "لمحة من جودة الرسوم التحريكية الصناعية ثلاثية الأبعاد التي يُقدِّمها Mechanim لعملاء حول العالم.",
+    "anim.showcase.p":       "لمحة من جودة الرسوم التحريكية الصناعية ثلاثية الأبعاد التي نقدمها لعملاء في المملكة العربية السعودية وما وراءها.",
 
     "anim.gallery.title":    "معرض المشاريع",
     "anim.g1":               "محاكاة صناعية",
@@ -899,19 +899,19 @@ const translations = {
 
     "anim.process.eyebrow":  "كيف نعمل",
     "anim.process.h2":       "من الفكرة إلى الرسوم التحريكية النهائية",
-    "anim.process.p":        "عملية مبسَّطة من أربع خطوات — تُنسِّقها إفيشنت سوليوشنز بينك وبين فريق استوديو Mechanim.",
+    "anim.process.p":        "عملية مبسَّطة من أربع خطوات — تُديرها بالكامل فريق الرسوم الهندسية الداخلي لدينا من الإحاطة إلى التسليم النهائي.",
     "anim.proc1.h4":         "الإحاطة والنطاق",
     "anim.proc1.p":          "نجمع ملفات CAD وأهداف الاستخدام والجمهور المستهدف لتحديد نطاق الرسوم التحريكية.",
     "anim.proc2.h4":         "النمذجة ثلاثية الأبعاد",
-    "anim.proc2.p":          "يبني مهندسو Mechanim النموذج ثلاثي الأبعاد أو يُحسِّنونه بدقة هندسية لضمان الصحة التقنية.",
+    "anim.proc2.p":          "يبني مهندسونا النموذج ثلاثي الأبعاد أو يُحسِّنونه بدقة هندسية لضمان الصحة التقنية الكاملة.",
     "anim.proc3.h4":         "التحريك والمراجعة",
     "anim.proc3.p":          "تُنجَز الحركة والإضاءة والتصيير النهائي. تراجع وتوافق على كل مرحلة.",
     "anim.proc4.h4":         "التسليم والدعم",
     "anim.proc4.p":          "تُسلَّم الملفات النهائية بالتنسيق المطلوب — MP4 أو WebGL أو عارض تفاعلي — مع تعديلات مشمولة.",
 
-    "anim.why.eyebrow":      "لماذا Mechanim",
+    "anim.why.eyebrow":      "لماذا تختارنا",
     "anim.why.h2":           "دقة هندسية وتميُّز إبداعي",
-    "anim.why.p":            "خلافاً لاستوديوهات الرسوم العادية، فريق Mechanim من مهندسين ميكانيكيين مؤهَّلين — يفهمون الفجوات والديناميكيات والمنطق التجميعي. ما يعني رسوماً تحريكية يثق بها المهندسون، لا تُعجب فرق التسويق فحسب.",
+    "anim.why.p":            "خلافاً لاستوديوهات الرسوم العادية، فريقنا من مهندسين ميكانيكيين مؤهَّلين — يفهمون الفجوات والديناميكيات والمنطق التجميعي. ما يعني رسوماً تحريكية يثق بها المهندسون، لا تُعجب فرق التسويق فحسب.",
     "anim.why1.h4":          "خبرة هندسية",
     "anim.why1.p":           "رسوم تحريكية يبنيها مهندسون يفهمون الأنظمة المعقدة — لا مجرد فنانين ينفِّذون مطلوبات.",
     "anim.why2.h4":          "حلول مخصصة",
@@ -920,8 +920,8 @@ const translations = {
     "anim.why3.p":           "سجل حافل مع عملاء صناعيين عبر دول وقطاعات متعددة.",
     "anim.why.cta":          "ابدأ مشروعك ←",
 
-    "anim.studio.label":     "استوديو Mechanim",
-    "anim.studio.sub":       "فريق من المهندسين الميكانيكيين",
+    "anim.studio.label":     "إفيشنت سوليوشنز",
+    "anim.studio.sub":       "استوديو الرسوم الهندسية",
 
     "anim.i1.t": "تصور صناعي ثلاثي الأبعاد",
     "anim.i1.d": "نماذج واقعية للآلات والأنظمة.",
@@ -932,8 +932,8 @@ const translations = {
     "anim.i4.t": "عروض المستثمرين",
     "anim.i4.d": "تصاميم احترافية للعروض التجارية.",
 
-    "anim.partner.title":    "بشراكة مع Mechanim",
-    "anim.partner.desc":     "Mechanim استوديو متخصص في الرسوم الصناعية ثلاثية الأبعاد يُديره مهندسون ميكانيكيون. مهمتهم — تبسيط التعقيد من خلال حلول بصرية جذابة — تتوافق تماماً مع حاجة المملكة للتواصل التقني عبر القوى العاملة متعددة الجنسيات واللغات. من خلال إفيشنت سوليوشنز، أصبحت هذه الخبرة في متناولك داخل المملكة.",
+    "anim.partner.title":    "الرسوم الهندسية من إفيشنت سوليوشنز",
+    "anim.partner.desc":     "فريق الرسوم الهندسية الداخلي لدينا مؤلَّف من مهندسين ميكانيكيين مؤهَّلين. مهمتهم — تبسيط التعقيد من خلال حلول بصرية جذابة — تتوافق تماماً مع حاجة المملكة للتواصل التقني عبر القوى العاملة متعددة الجنسيات واللغات.",
     "anim.partner.cta":      "طلب عرض سعر للرسوم التحريكية",
 
     /* ── Seal product page ── */
@@ -1324,3 +1324,69 @@ handleForm('contact-form-product', 'submit-product', 'success-product',
 });
 
 
+function initDropdowns() {
+  const dropdowns = $$('.nav-dropdown');
+  const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
+  
+  dropdowns.forEach(dd => {
+    const link = dd.querySelector('a:first-child');
+    const menu = dd.querySelector('.dropdown-menu');
+    
+    if (isTouchDevice()) {
+      link.addEventListener('click', (e) => {
+        if (!dd.classList.contains('active')) {
+          e.preventDefault();
+          dropdowns.forEach(d => d.classList.remove('active'));
+          dd.classList.add('active');
+        }
+      });
+    }
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown')) {
+      dropdowns.forEach(d => d.classList.remove('active'));
+    }
+  });
+}
+ 
+function openSection() {
+  const section = new URLSearchParams(window.location.search).get('section');
+  if (section && $(`#cat-${section}`)) {
+    const el = $(`#cat-${section}`);
+    el.classList.add('open');
+    el.querySelector('.cat-accordion-header')?.setAttribute('aria-expanded', 'true');
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+  }
+}
+ 
+document.addEventListener('DOMContentLoaded', () => {
+  handleForm('contact-form-business', 'submit-business', 'success-business',
+    'service_13t62vi', 'template_xhjag9q');
+  handleForm('contact-form-product', 'submit-product', 'success-product',
+    'service_13t62vi', 'template_gxl6y0j');
+  initDropdowns();
+  openSection();
+  initServiceSelection();
+});
+
+function initServiceSelection() {
+  // Switch tab based on ?tab= URL param (set by services page links)
+  const tabParam = new URLSearchParams(window.location.search).get('tab');
+  if (tabParam && document.getElementById('tab-' + tabParam)) {
+    switchTab(tabParam);
+  }
+
+  // Pre-fill the enquiry message with the service name stored in sessionStorage
+  const service = sessionStorage.getItem('selectedService');
+  if (service) {
+    sessionStorage.removeItem('selectedService');
+    switchTab('product');
+    setTimeout(() => {
+      const msgField = document.getElementById('p-message');
+      if (msgField && !msgField.value) {
+        msgField.value = 'I am interested in: ' + service;
+      }
+    }, 150);
+  }
+}

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Engineering animation and 3D industrial visualization for Saudi Arabia — in partnership with Mechanim, a specialist industrial animation studio run by mechanical engineers." />
-  <meta property="og:title" content="Engineering Animation | Efficient Solutions × Mechanim" />
-  <meta property="og:description" content="Transforming complex engineering concepts into clear, compelling 3D animations — delivered to Saudi Arabia in partnership with Mechanim." />
+  <meta name="description" content="Engineering animation and 3D industrial visualization for Saudi Arabia — delivered by Efficient Solutions' in-house engineering animation team." />
+  <meta property="og:title" content="Engineering Animation | Efficient Solutions" />
+  <meta property="og:description" content="Transforming complex engineering concepts into clear, compelling 3D animations — delivered by our in-house engineering animation team." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.efficientsolutionsksa.com/product-engAnimation.html" />
   <Link rel="icon" type="image/png" href="IconOnly.png" >
@@ -227,7 +227,7 @@
     .proc-step h4 { color: #fff; font-size: 0.95rem; margin-bottom: 8px; }
     .proc-step p  { color: rgba(255,255,255,0.5); font-size: 0.84rem; line-height: 1.6; }
 
-    /* ── WHY MECHANIM ── */
+    /* ── WHY CHOOSE US ── */
     .why-anim { padding: 80px 0; background: #fff; }
     .why-anim .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .why-anim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -306,28 +306,75 @@
       .partner-logo-wrap { flex-wrap: wrap; justify-content: center; }
       .video-strip { padding: 0 16px 60px; }
     }
+
+    /* DROPDOWN MENU */
+    .nav-dropdown { 
+      position: relative; }
+    .dropdown-menu { 
+      display: none; position: absolute; top: 100%; 
+      left: 0; background: #fff;
+       border-radius: 8px; 
+      
+      box-shadow: 0 4px 12px rgba(11,31,58,0.15); 
+      list-style: none; padding: 8px 0; min-width:
+       180px; z-index: 1000; 
+      }
+    .nav-dropdown:hover .dropdown-menu,
+
+    .nav-dropdown.active .dropdown-menu { 
+      display: block;
+    }
+    .dropdown-menu li {
+       padding: 0; 
+      }
+    .dropdown-menu li a { 
+      display: block; padding: 10px 16px; color: #0B1F3A; text-decoration: none; 
+      font-size: 0.93rem; transition: background 0.2s ease; }
+    .dropdown-menu li a:hover {
+       background: #F8FAFB; 
+       color: #0f766e; }
+
+
+    @media (max-width: 768px) {
+      .nav-dropdown.active .dropdown-menu { display: block; }
+      .nav-dropdown:hover .dropdown-menu { display: none; }
+
+    }
   </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav id="navbar" role="navigation" aria-label="Main navigation">
+ <!-- NAVIGATION -->
+ <nav id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Efficient Solutions Home">
       <img src="logo.png" alt="Efficient Solutions Logo" width="180" height="52" />
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="index.html"    data-i18n="nav.home">Home</a></li>
-      <li><a href="about.html"    data-i18n="nav.about">About Us</a></li>
-      <li><a href="products.html" data-i18n="nav.products" class="active">Products</a></li>
-      <li>   <a href="servcies.html" data-i18n="nav.services" >Services</a>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+      <li class="nav-dropdown">
+        <a href="products.html" data-i18n="nav.products" class="active">Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="products.html?section=mechanical">Mechanical</a></li>
+          <li><a href="products.html?section=electrical">Electrical</a></li>
+          <li><a href="products.html?section=instrumental">Control & Instrumentation</a></li>
+        </ul>
       </li>
-      <li><a href="contact.html"  data-i18n="nav.contact">Contact Us</a></li>
+      <li class="nav-dropdown">
+        <a href="servcies.html" data-i18n="nav.services">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="servcies.html?section=mechanical">Mechanical</a></li>
+          <li><a href="servcies.html?section=electrical">Electrical</a></li>
+          <li><a href="servcies.html?section=instrumental">Control & Instrumentation</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
     </ul>
     <div class="nav-actions">
       <div class="lang-toggle" role="group" aria-label="Language selection">
         <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn"        data-lang="ar" aria-pressed="false">AR</button>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
       </div>
       <a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get in Touch</a>
       <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -376,7 +423,7 @@
     </h1>
 
     <p class="anim-hero-desc" data-i18n="anim.hero.desc">
-      Transforming complex engineering concepts into clear, compelling 3D animations for training, sales, and technical communication — brought to Saudi Arabia in partnership with Mechanim.
+      Transforming complex engineering concepts into clear, compelling 3D animations for training, sales, and technical communication — delivered by our in-house engineering animation team.
     </p>
 
   </div>
@@ -386,12 +433,11 @@
 <!-- ── VIDEO STRIP ── -->
 <div class="video-strip">
 
-  <!-- Video 1: Mechanim Showreel 2025 -->
   <div class="video-card">
     <div class="video-card-embed">
       <iframe
         src="https://www.youtube.com/embed/2Z8pUoBBxQM?rel=0&modestbranding=1&color=white"
-        title="3D Industrial Animation Showreel 2025 — Mechanim"
+        title="3D Industrial Animation Showreel 2025"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         loading="lazy">
@@ -412,12 +458,11 @@
     </div>
   </div>
 
-  <!-- Video 2: Mechanim Industrial Animation Showreel -->
   <div class="video-card">
     <div class="video-card-embed">
       <iframe
         src="https://www.youtube.com/embed/NfjhGRdLYEw?rel=0&modestbranding=1&color=white"
-        title="Industrial Animation Showreel — Mechanim"
+        title="Industrial Animation Showreel"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         loading="lazy">
@@ -447,7 +492,7 @@
 
     <span class="section-eyebrow" data-i18n="anim.what.eyebrow">What We Deliver</span>
     <h2 id="anim-what-h2" class="section-heading" data-i18n="anim.what.h2">Six Ways Animation Elevates Your Business</h2>
-    <p class="section-sub" data-i18n="anim.what.p">Mechanim is a team of mechanical engineers turned animators — meaning every visualization is technically accurate, not just visually impressive. Through Efficient Solutions, Saudi companies get this expertise locally.</p>
+    <p class="section-sub" data-i18n="anim.what.p">Our engineering animation team consists of qualified mechanical engineers turned animators — meaning every visualization is technically accurate, not just visually impressive. Efficient Solutions delivers this expertise directly to Saudi Arabia's industrial sector.</p>
 
     <div class="application-grid">
 
@@ -510,12 +555,12 @@
 
     <span class="section-eyebrow" data-i18n="anim.showcase.eyebrow">Project Showcase</span>
     <h2 id="anim-gallery-h2" class="section-heading" data-i18n="anim.showcase.h2">Animation in Action</h2>
-    <p class="section-sub" data-i18n="anim.showcase.p">A glimpse into the quality of 3D industrial animation delivered by Mechanim for clients across the globe.</p>
+    <p class="section-sub" data-i18n="anim.showcase.p">A glimpse into the quality of 3D industrial animation we deliver for clients across Saudi Arabia and beyond.</p>
 
     <div class="gallery-grid">
 
       <div class="gallery-card reveal">
-        <img src="https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render.png" alt="Precision machine 3D render by Mechanim" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&q=80" alt="Precision 3D industrial machine visualization" loading="lazy" />
         <div class="gallery-overlay">
           <div class="gallery-tag" data-i18n="anim.gallery.tag1">3D Industrial Render</div>
           <div data-i18n="anim.gallery.name1">Precision Machine Visualization</div>
@@ -573,7 +618,7 @@
 
     <span class="section-eyebrow" data-i18n="anim.process.eyebrow">How It Works</span>
     <h2 id="anim-process-h2" class="section-heading" data-i18n="anim.process.h2">From Concept to Final Animation</h2>
-    <p class="section-sub" data-i18n="anim.process.p">A streamlined four-step process — coordinated by Efficient Solutions between you and Mechanim's studio team.</p>
+    <p class="section-sub" data-i18n="anim.process.p">A streamlined four-step process — fully managed by our in-house engineering animation team from brief to final delivery.</p>
 
     <div class="process-steps-anim">
 
@@ -586,7 +631,7 @@
       <div class="proc-step reveal">
         <div class="proc-num">02</div>
         <h4 data-i18n="anim.proc2.h4">3D Modelling</h4>
-        <p data-i18n="anim.proc2.p">Mechanim's engineers build or refine the 3D model with engineering precision, ensuring technical accuracy.</p>
+        <p data-i18n="anim.proc2.p">Our engineers build or refine the 3D model with engineering precision, ensuring complete technical accuracy.</p>
       </div>
 
       <div class="proc-step reveal">
@@ -606,7 +651,7 @@
 </section>
 
 
-<!-- ── WHY MECHANIM ── -->
+<!-- ── WHY CHOOSE US ── -->
 <section class="why-anim reveal" aria-labelledby="anim-why-h2">
   <div class="container">
     <div class="why-anim-grid">
@@ -614,15 +659,15 @@
       <div class="why-anim-img reveal-left">
         <img src="https://mechanim.co.in/wp-content/uploads/2025/07/TSA-Render-1024x576.png" alt="Mechanim 3D industrial animation studio" loading="lazy" />
         <div class="why-anim-img-badge">
-          <strong data-i18n="anim.studio.label">Mechanim Studio</strong>
-          <span data-i18n="anim.studio.sub">Team of Mechanical Engineers</span>
+          <strong data-i18n="anim.studio.sub">Engineering Animation Studio</strong>
+      
         </div>
       </div>
 
       <div class="reveal-right">
-        <span class="section-eyebrow" data-i18n="anim.why.eyebrow">Why Mechanim</span>
+        <span class="section-eyebrow" data-i18n="anim.why.eyebrow">Why Choose Us</span>
         <h2 id="anim-why-h2" class="section-heading" data-i18n="anim.why.h2">Engineering Accuracy Meets Creative Excellence</h2>
-        <p style="color:var(--muted);font-size:0.94rem;line-height:1.7;margin-bottom:24px;" data-i18n="anim.why.p">Unlike generic animation studios, Mechanim's team are qualified mechanical engineers — they understand tolerances, flow dynamics, and assembly logic. This means animations that are trusted by engineers, not just admired by marketing teams.</p>
+        <p style="color:var(--muted);font-size:0.94rem;line-height:1.7;margin-bottom:24px;" data-i18n="anim.why.p">Unlike generic animation studios, our team are qualified mechanical engineers — they understand tolerances, flow dynamics, and assembly logic. This means animations that are trusted by engineers, not just admired by marketing teams.</p>
 
         <div class="why-points">
 
