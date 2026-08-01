@@ -122,12 +122,12 @@
     }
 
     /* PRODUCTS GRID */
-    .services-section {
+    .products-section {
       padding: 90px 0 100px;
       background: #F8FAFB;
     }
-    .services-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .services-section .intro { margin-bottom: 52px; }
+    .products-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .products-section .intro { margin-bottom: 52px; }
 
     .products-grid-v2 {
       display: grid;
@@ -231,12 +231,14 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
       transition: gap 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
     }
-    .pcard:hover .pcard-link { gap: 12px; }
+    .pcard-link:hover { gap: 12px; }
     .pcard-link svg {
       transition: transform 0.3s ease;
     }
-    .pcard:hover .pcard-link svg { transform: translateX(4px); }
+    .pcard-link:hover svg { transform: translateX(4px); }
     .pcard-tags {
       display: flex;
       gap: 6px;
@@ -330,17 +332,17 @@
     }
 
     @media (max-width: 900px) {
-      .services-grid-v2 { grid-template-columns: 1fr; }
+      .products-grid-v2 { grid-template-columns: 1fr; }
       .trust-strip .container { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 540px) {
       .hero-stats { gap: 16px; }
       .trust-strip .container { grid-template-columns: 1fr 1fr; }
-      .services-hero-content { padding: 90px 18px 60px; }
+      .products-hero-content { padding: 90px 18px 60px; }
     }
     @media (max-width: 400px) {
       .trust-strip .container { grid-template-columns: 1fr; }
-      .services-hero-content { padding: 80px 16px 48px; }
+      .products-hero-content { padding: 80px 16px 48px; }
     }
 
     /* ── CATEGORY ACCORDIONS ── */
@@ -472,7 +474,6 @@
       overflow: hidden;
       border: 1px solid rgba(11,31,58,0.06);
       box-shadow: 0 4px 20px rgba(11,31,58,0.06);
-      text-decoration: none;
       color: inherit;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -503,32 +504,32 @@
       text-transform: uppercase; padding: 5px 14px; border-radius: 50px;
       z-index: 2;
     }
-    
+
     /* DROPDOWN MENU */
-    .nav-dropdown { 
+    .nav-dropdown {
       position: relative; }
-    .dropdown-menu { 
-      display: none; position: absolute; top: 100%; 
+    .dropdown-menu {
+      display: none; position: absolute; top: 100%;
       left: 0; background: #fff;
-       border-radius: 8px; 
-      
-      box-shadow: 0 4px 12px rgba(11,31,58,0.15); 
+       border-radius: 8px;
+
+      box-shadow: 0 4px 12px rgba(11,31,58,0.15);
       list-style: none; padding: 8px 0; min-width:
-       180px; z-index: 1000; 
+       180px; z-index: 1000;
       }
     .nav-dropdown:hover .dropdown-menu,
 
-    .nav-dropdown.active .dropdown-menu { 
+    .nav-dropdown.active .dropdown-menu {
       display: block;
     }
     .dropdown-menu li {
-       padding: 0; 
+       padding: 0;
       }
-    .dropdown-menu li a { 
-      display: block; padding: 10px 16px; color: #0B1F3A; text-decoration: none; 
+    .dropdown-menu li a {
+      display: block; padding: 10px 16px; color: #0B1F3A; text-decoration: none;
       font-size: 0.93rem; transition: background 0.2s ease; }
     .dropdown-menu li a:hover {
-       background: #F8FAFB; 
+       background: #F8FAFB;
        color: #0f766e; }
 
 
@@ -551,19 +552,19 @@
       <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
       <li class="nav-dropdown">
-        <a href="products.html" data-i18n="nav.products" ">Products</a>
+        <a href="products.html" data-i18n="nav.products" >Products</a><div class="dropdown-arrow"></div>
         <ul class="dropdown-menu">
-          <li><a href="products.html?section=mechanical">Mechanical</a></li>
-          <li><a href="products.html?section=electrical">Electrical</a></li>
-          <li><a href="products.html?section=instrumental">Control & Instrumentation</a></li>
+          <li><a href="products.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
+          <li><a href="products.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
+          <li><a href="products.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="servcies.html" data-i18n="nav.services">Services</a>
+        <a href="servcies.html" data-i18n="nav.services" class="active">Services</a><div class="dropdown-arrow"></div>
         <ul class="dropdown-menu">
-          <li><a href="servcies.html?section=mechanical">Mechanical</a></li>
-          <li><a href="servcies.html?section=electrical">Electrical</a></li>
-          <li><a href="servcies.html?section=instrumental">Control & Instrumentation</a></li>
+          <li><a href="servcies.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
+          <li><a href="servcies.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
+          <li><a href="servcies.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
         </ul>
       </li>
       <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
@@ -605,60 +606,60 @@
 
     <div class="products-hero-content">
 
-      <span class="products-hero-eyebrow">Technical & Engineering Services</span>
+      <span class="products-hero-eyebrow" data-i18n="svcpage.eyebrow">Technical & Engineering Services</span>
 
-      <h1>Power, Precision & <em>Performance</em></h1>
+      <h1><span data-i18n="svcpage.h1a">Power, Precision &amp;</span> <em data-i18n="svcpage.h1b">Performance</em></h1>
 
-      <p>In-house engineering support plus specialist electrical services — power quality, safety, maintenance, and thermography — delivered for Saudi Arabia's industrial sector.</p>
+      <p data-i18n="svcpage.hero.desc">In-house engineering support plus specialist electrical services — power quality, safety, maintenance, and thermography — delivered for Saudi Arabia's industrial sector.</p>
 
       <div class="hero-stats">
-        <div class="hero-stat"><strong>6</strong><span>Service Lines</span></div>
-        <div class="hero-stat"><strong>KSA</strong><span>Market Focus</span></div>
-        <div class="hero-stat"><strong>ITC</strong><span>Certified</span></div>
+        <div class="hero-stat"><strong>12</strong><span data-i18n="svcpage.stat1">Service Lines</span></div>
+        <div class="hero-stat"><strong>KSA</strong><span data-i18n="prod.hero.stat2">Market Focus</span></div>
+        <div class="hero-stat"><strong>ITC</strong><span data-i18n="prod.hero.stat3">Certified</span></div>
       </div>
 
     </div>
   </section>
-  
+
   <!-- PRODUCTS -->
   <section class="services-section">
     <div class="container">
-  
+
       <div class="intro">
-  
-        <span class="section-eyebrow">
+
+        <span class="section-eyebrow" data-i18n="svcpage.intro.eyebrow">
           Our Services
         </span>
-  
-        <h2 class="section-heading">Technical Services for Industry</h2>
-  
-        <p class="section-sub">Efficient Solutions delivers in-house engineering support alongside specialist services from our technology partners, tailored to Saudi Arabia's industrial and power sectors.</p>
-  
+
+        <h2 class="section-heading" data-i18n="svcpage.intro.h2">Technical Services for Industry</h2>
+
+        <p class="section-sub" data-i18n="svcpage.intro.desc">Efficient Solutions delivers in-house engineering support alongside specialist services from our technology partners, tailored to Saudi Arabia's industrial and power sectors.</p>
+
       </div>
 
       <!-- ══ FEATURED — EFFICIENT SOLUTIONS OWN SERVICE ══════ -->
       <div class="services-list" style="margin-bottom:24px;">
-        <a href="contact.html" class="pcard-h pcard-featured">
+        <div class="pcard-h pcard-featured">
           <div class="pcard-img-wrap">
             <img src="https://images.pexels.com/photos/29248902/pexels-photo-29248902.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Efficient Solutions engineering services" />
             <div class="pcard-img-overlay"></div>
-            <span class="pcard-badge">Efficient Solutions</span>
+            <span class="pcard-badge" data-i18n="svcpage.featured.badge">Efficient Solutions</span>
           </div>
           <div class="pcard-body">
-            <span class="pcard-partner">In-House Engineering Team</span>
-            <h2>Engineering & Technical Consulting</h2>
-            <p>Our own engineering support for Saudi Arabia's industrial sector — project consulting, technical advisory, and coordination across mechanical, electrical, and instrumentation disciplines. Get in touch to discuss your project.</p>
+            <span class="pcard-partner" data-i18n="svcpage.featured.partner">In-House Engineering Team</span>
+            <h2 data-i18n="svcpage.featured.title">Engineering &amp; Technical Consulting</h2>
+            <p data-i18n="svcpage.featured.desc">Our own engineering support for Saudi Arabia's industrial sector — project consulting, technical advisory, and coordination across mechanical, electrical, and instrumentation disciplines. Get in touch to discuss your project.</p>
             <div class="pcard-footer">
-              <span class="pcard-link">Discuss Your Project</span>
+              <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.featured.link" onclick="sessionStorage.setItem('selectedProduct','engineering-technical-consulting')">Discuss Your Project</a>
               <div class="pcard-tags">
-                <span class="pcard-tag">Consulting</span>
-                <span class="pcard-tag">Project Support</span>
+                <span class="pcard-tag" data-i18n="svcpage.featured.tag1">Consulting</span>
+                <span class="pcard-tag" data-i18n="svcpage.featured.tag2">Project Support</span>
               </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
-  
+
       <!-- ══ MECHANICAL ══════════════════════════════════════ -->
       <div class="cat-accordion" id="cat-mechanical">
 
@@ -722,10 +723,10 @@
       </div><!-- /cat-mechanical -->
 
 
- 
+
       <!-- ══ ELECTRICAL ══════════════════════════════════════ -->
       <div class="cat-accordion" id="cat-electrical">
- 
+
         <div class="cat-accordion-header" role="button" aria-expanded="false" aria-controls="body-electrical">
           <div class="cat-left">
             <div class="cat-icon">
@@ -740,102 +741,102 @@
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </div>
         </div>
- 
+
         <div class="cat-body" id="body-electrical">
           <div class="services-list">
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','Power Quality')">
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://3phtechservices.com/wp-content/uploads/2025/07/Power-Quality-Analysis-1-1-1.webp" alt="Power quality study and analysis" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Power Quality</span>
+                <span class="pcard-badge" data-i18n="svcpage.e1.badge">Power Quality</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Electrical Services Partner</span>
-                <h2>Power Quality Study & Analysis</h2>
-                <p>Detailed assessment of power quality issues to protect equipment, reduce downtime, and improve overall system reliability.</p>
+                <span class="pcard-partner" data-i18n="svcpage.elec.partner">Electrical Services Partner</span>
+                <h2 data-i18n="svcpage.e1.title">Power Quality Study &amp; Analysis</h2>
+                <p data-i18n="svcpage.e1.desc">Detailed assessment of power quality issues to protect equipment, reduce downtime, and improve overall system reliability.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Analysis</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','power-quality-study')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.e1.tag">Analysis</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','Electrical Safety Audits')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://3phtechservices.com/wp-content/uploads/2025/07/82170261430-1024x459.webp" alt="Electrical safety and energy audit" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Audits</span>
+                <span class="pcard-badge" data-i18n="svcpage.e2.badge">Audits</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Electrical Services Partner</span>
-                <h2>Electrical Safety & Energy Audits</h2>
-                <p>Comprehensive audits identifying safety risks and energy efficiency opportunities across LV/MV electrical installations.</p>
+                <span class="pcard-partner" data-i18n="svcpage.elec.partner">Electrical Services Partner</span>
+                <h2 data-i18n="svcpage.e2.title">Electrical Safety &amp; Energy Audits</h2>
+                <p data-i18n="svcpage.e2.desc">Comprehensive audits identifying safety risks and energy efficiency opportunities across LV/MV electrical installations.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Safety</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','electrical-safety-audits')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.e2.tag">Safety</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','Switchgear Retrofitting')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://3phtechservices.com/wp-content/uploads/2025/07/Load-Schedule_-SLD-_-Power-Control-Schematic-Drawings-1-1024x872.png" alt="LV MV switchgear retrofitting" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Retrofit</span>
+                <span class="pcard-badge" data-i18n="svcpage.e3.badge">Retrofit</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Electrical Services Partner</span>
-                <h2>LV/MV Switchgear Retrofitting & Refurbishment</h2>
-                <p>Modernization and refurbishment of low and medium voltage switchgear systems to extend service life and improve safety.</p>
+                <span class="pcard-partner" data-i18n="svcpage.elec.partner">Electrical Services Partner</span>
+                <h2 data-i18n="svcpage.e3.title">LV/MV Switchgear Retrofitting &amp; Refurbishment</h2>
+                <p data-i18n="svcpage.e3.desc">Modernization and refurbishment of low and medium voltage switchgear systems to extend service life and improve safety.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Switchgear</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','switchgear-retrofitting')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.e3.tag">Switchgear</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','Annual Maintenance Contracts')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://3phtechservices.com/wp-content/uploads/2025/07/Load-Flow-Study-Analysis-1024x872.png" alt="Annual maintenance contracts for switchgear" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">AMC</span>
+                <span class="pcard-badge" data-i18n="svcpage.e4.badge">AMC</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Electrical Services Partner</span>
-                <h2>Annual Maintenance Contracts</h2>
-                <p>Scheduled LV/MV switchgear maintenance delivered by technicians trained on Schneider, ABB, and Siemens systems.</p>
+                <span class="pcard-partner" data-i18n="svcpage.elec.partner">Electrical Services Partner</span>
+                <h2 data-i18n="svcpage.e4.title">Annual Maintenance Contracts</h2>
+                <p data-i18n="svcpage.e4.desc">Scheduled LV/MV switchgear maintenance delivered by technicians trained on Schneider, ABB, and Siemens systems.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Maintenance</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','annual-maintenance-contracts')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.e4.tag">Maintenance</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','Thermography Inspection')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://3phtechservices.com/wp-content/uploads/2025/07/82170261430-1024x459.webp" alt="Thermography inspection" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Thermography</span>
+                <span class="pcard-badge" data-i18n="svcpage.e5.badge">Thermography</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Electrical Services Partner</span>
-                <h2>Thermography Inspection</h2>
-                <p>Infrared thermal imaging carried out by ITC-certified thermographers to detect faults before they cause failure.</p>
+                <span class="pcard-partner" data-i18n="svcpage.elec.partner">Electrical Services Partner</span>
+                <h2 data-i18n="svcpage.e5.title">Thermography Inspection</h2>
+                <p data-i18n="svcpage.e5.desc">Infrared thermal imaging carried out by ITC-certified thermographers to detect faults before they cause failure.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">ITC Certified</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','thermography-inspection')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.e5.tag">ITC Certified</span></div>
                 </div>
               </div>
-            </a>
+            </div>
 </div>
           </div>
       </div><!-- /cat-electrical -->
- 
- 
+
+
       <!-- ══ INSTRUMENTAL ════════════════════════════════════ -->
       <div class="cat-accordion" id="cat-instrumental">
- 
+
         <div class="cat-accordion-header" role="button" aria-expanded="false" aria-controls="body-instrumental">
           <div class="cat-left">
             <div class="cat-icon">
@@ -850,140 +851,141 @@
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </div>
         </div>
- 
+
         <div class="cat-body" id="body-instrumental">
           <div class="services-list">
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','PLC & SCADA Systems')">
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&q=80" alt="PLC & SCADA Systems" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Automation</span>
+                <span class="pcard-badge" data-i18n="svcpage.i1.badge">Automation</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">3PH Tech Services</span>
-                <h2>PLC & SCADA Systems</h2>
-                <p>Development & integration with Schneider, SIEMENS, GE-Fanuc, and Rockwell Automation platforms.</p>
+                <span class="pcard-partner" data-i18n="svcpage.i1.partner">3PH Tech Services</span>
+                <h2 data-i18n="svcpage.i1.title">PLC &amp; SCADA Systems</h2>
+                <p data-i18n="svcpage.i1.desc">Development &amp; integration with Schneider, SIEMENS, GE-Fanuc, and Rockwell Automation platforms.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Automation</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','plc-scada-systems')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.i1.tag">Automation</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','DAVAS')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt="DAVAS" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Monitoring</span>
+                <span class="pcard-badge" data-i18n="svcpage.i2.badge">Monitoring</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">3PH Tech Solutions</span>
-                <h2>DAVAS - Data Acquisition & Visualization</h2>
-                <p>Energy management and condition monitoring for electrical and mechanical assets.</p>
+                <span class="pcard-partner" data-i18n="svcpage.i2.partner">3PH Tech Solutions</span>
+                <h2 data-i18n="svcpage.i2.title">DAVAS - Data Acquisition &amp; Visualization</h2>
+                <p data-i18n="svcpage.i2.desc">Energy management and condition monitoring for electrical and mechanical assets.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Monitoring</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','davas')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.i2.tag">Monitoring</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','Certified Service Partners')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&q=80" alt="Certified Partners" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Certified</span>
+                <span class="pcard-badge" data-i18n="svcpage.i3.badge">Certified</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Schneider Electric</span>
-                <h2>Certified Service Partners</h2>
-                <p>Authorized partner for Schneider Electric LV Switchgear Systems & Industrial Automation.</p>
+                <span class="pcard-partner" data-i18n="svcpage.i3.partner">Schneider Electric</span>
+                <h2 data-i18n="svcpage.i3.title">Certified Service Partners</h2>
+                <p data-i18n="svcpage.i3.desc">Authorized partner for Schneider Electric LV Switchgear Systems &amp; Industrial Automation.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">Certified</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','certified-service-partners')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.i3.tag">Certified</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','SPIRE Smart Building')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="SPIRE" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">UL Certified</span>
+                <span class="pcard-badge" data-i18n="svcpage.i4.badge">UL Certified</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">UL Certification</span>
-                <h2>SPIRE Smart Building Program</h2>
-                <p>UL Certified advanced building automation and intelligent energy management solutions.</p>
+                <span class="pcard-partner" data-i18n="svcpage.i4.partner">UL Certification</span>
+                <h2 data-i18n="svcpage.i4.title">SPIRE Smart Building Program</h2>
+                <p data-i18n="svcpage.i4.desc">UL Certified advanced building automation and intelligent energy management solutions.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">UL Certified</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','spire-smart-building')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.i4.tag">UL Certified</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','CPD Trainings')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80" alt="Training" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Training</span>
+                <span class="pcard-badge" data-i18n="svcpage.i5.badge">Training</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">CPD (UK) Certified</span>
-                <h2>Trainings & Workshops</h2>
-                <p>CPD certified professional development on control systems and industrial automation.</p>
+                <span class="pcard-partner" data-i18n="svcpage.i5.partner">CPD (UK) Certified</span>
+                <h2 data-i18n="svcpage.i5.title">Trainings &amp; Workshops</h2>
+                <p data-i18n="svcpage.i5.desc">CPD certified professional development on control systems and industrial automation.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">CPD Certified</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','trainings-workshops')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.i5.tag">CPD Certified</span></div>
                 </div>
               </div>
-            </a>
- 
-            <a href="contact.html?tab=product#form-product" class="pcard-h" onclick="sessionStorage.setItem('selectedService','ISO 9001:2015')">
+            </div>
+
+            <div class="pcard-h">
               <div class="pcard-img-wrap">
                 <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="ISO" />
                 <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">ISO 9001</span>
+                <span class="pcard-badge" data-i18n="svcpage.i6.badge">ISO 9001</span>
               </div>
               <div class="pcard-body">
-                <span class="pcard-partner">Quality Certified</span>
-                <h2>ISO 9001:2015 Compliance</h2>
-                <p>ISO certified quality management ensuring compliance and continuous improvement.</p>
+                <span class="pcard-partner" data-i18n="svcpage.i6.partner">Quality Certified</span>
+                <h2 data-i18n="svcpage.i6.title">ISO 9001:2015 Compliance</h2>
+                <p data-i18n="svcpage.i6.desc">ISO certified quality management ensuring compliance and continuous improvement.</p>
                 <div class="pcard-footer">
-                  <span class="pcard-link">Enquire</span>
-                  <div class="pcard-tags"><span class="pcard-tag">ISO Certified</span></div>
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','iso-9001-compliance')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.i6.tag">ISO Certified</span></div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div><!-- /cat-instrumental -->
- 
+
   </section>
-  
+
   <!-- TRUST STRIP -->
   <div class="trust-strip">
     <div class="container">
-  
+
       <div class="trust-item">
         <strong>Vision</strong>
         <p data-i18n="trust.t1">2030 Aligned</p>
       </div>
-  
+
       <div class="trust-item">
         <strong>KSA</strong>
         <p data-i18n="trust.t2">Eastern Province</p>
       </div>
-  
+
       <div class="trust-item">
         <strong>ISO</strong>
         <p data-i18n="trust.t3">Certified Partners</p>
       </div>
-  
+
       <div class="trust-item">
         <strong>24/7</strong>
         <p data-i18n="trust.t4">Technical Support</p>
       </div>
-  
+
     </div>
   </div>
 
@@ -1014,7 +1016,7 @@
           <h5 data-i18n="footer.connect">Connect</h5>
           <div class="footer-contact-item">
             <div class="icon"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-            <span>yousef.es@efficientsolutionsksa.com</span>
+            <a href="mailto:Sales@efficientsolutionsksa.com">            <span data-i18n="contact.email.val">Sales@efficientsolutionsksa.com</span> </a>
           </div>
           <div class="footer-contact-item">
             <div class="icon"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
@@ -1027,8 +1029,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Efficient Solutions. All rights reserved.</span>
-        <a href="#">Privacy Policy</a>
+        <span data-i18n="footer.rights">© 2025 Efficient Solutions. All rights reserved.</span>
+        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
       </div>
     </div>
   </footer>

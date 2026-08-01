@@ -22,12 +22,11 @@
     .hero-bg {
         position: absolute; inset: 0;
       background:
-        linear-gradient(to right, rgba(11,31,58,0.55) 10%),
         url('https://images.unsplash.com/photo-1524522173746-f628baad3644?w=1920&q=80') center/cover no-repeat;
       transform: scale(1.04);
       animation: slowPan 22s ease-in-out infinite alternate;
     }
-    @keyframes heroPan { from { transform: scale(1.06) translateX(0); } to { transform: scale(1.06) translateX(-3%); } }
+    @keyframes slowPan { from { transform: scale(1.06) translateX(0); } to { transform: scale(1.06) translateX(-3%); } }
     .hero-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(115deg, rgba(7,22,44,0.97) 35%, rgba(7,22,44,0.6) 80%, rgba(0,80,100,0.45) 100%);
@@ -355,19 +354,19 @@
       <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
       <li class="nav-dropdown">
-        <a href="products.html" data-i18n="nav.products" class="active">Products</a>
+        <a href="products.html" data-i18n="nav.products" class="active">Products</a><div class="dropdown-arrow"></div>
         <ul class="dropdown-menu">
-          <li><a href="products.html?section=mechanical">Mechanical</a></li>
-          <li><a href="products.html?section=electrical">Electrical</a></li>
-          <li><a href="products.html?section=instrumental">Control &amp; Instrumentation</a></li>
+          <li><a href="products.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
+          <li><a href="products.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
+          <li><a href="products.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="servcies.html" data-i18n="nav.services">Services</a>
+        <a href="servcies.html" data-i18n="nav.services">Services</a><div class="dropdown-arrow"></div>
         <ul class="dropdown-menu">
-          <li><a href="servcies.html?section=mechanical">Mechanical</a></li>
-          <li><a href="servcies.html?section=electrical">Electrical</a></li>
-          <li><a href="servcies.html?section=instrumental">Control &amp; Instrumentation</a></li>
+          <li><a href="servcies.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
+          <li><a href="servcies.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
+          <li><a href="servcies.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
         </ul>
       </li>
       <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
@@ -406,7 +405,6 @@
   <div class="hero-bg" role="presentation"></div>
   <div class="hero-overlay"></div>
   <div class="hero-particles" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <div class="anim-hero-content">
@@ -415,32 +413,32 @@
       <span aria-hidden="true">›</span>
       <a href="products.html">Products</a>
       <span aria-hidden="true">›</span>
-      <span style="color:rgba(255,255,255,0.75)">Marine Spare Parts</span>
+      <span style="color:rgba(255,255,255,0.75)" data-i18n="marine.breadcrumb">Marine Spare Parts</span>
     </nav>
 
-    <span class="hero-eyebrow">Marine &amp; Offshore Supply</span>
+    <span class="hero-eyebrow" data-i18n="marine.hero.eyebrow">Marine &amp; Offshore Supply</span>
 
     <h1>
-      Marine<br />
-      <span class="teal">Spare Parts</span>
+      <span data-i18n="marine.hero.h1a">Marine</span><br />
+      <span class="teal" data-i18n="marine.hero.h1b">Spare Parts</span>
     </h1>
 
-    <p class="anim-hero-desc">
+    <p class="anim-hero-desc" data-i18n="marine.hero.desc">
       Genuine and OEM-equivalent spare parts for vessels and offshore installations — engines, turbochargers, pumps, purifiers, compressors, valves, deck machinery, safety equipment and more, delivered to Saudi Arabia's ports and facilities.
     </p>
 
     <div class="hero-badges">
       <div class="hero-badge">
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        OEM-Equivalent Quality
+        <span data-i18n="marine.badge1">OEM-Equivalent Quality</span>
       </div>
       <div class="hero-badge">
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-        Wide Product Range
+        <span data-i18n="marine.badge2">Wide Product Range</span>
       </div>
       <div class="hero-badge">
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        Fast-Track Availability
+        <span data-i18n="marine.badge3">Fast-Track Availability</span>
       </div>
     </div>
   </div>
@@ -457,22 +455,22 @@
     <div class="stats-inner">
       <div class="stat-item">
         <span class="stat-num">10+</span>
-        <span class="stat-label">Part Categories</span>
+        <span class="stat-label" data-i18n="marine.stat1">Part Categories</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-num">1000s</span>
-        <span class="stat-label">SKUs Available</span>
+        <span class="stat-label" data-i18n="marine.stat2">SKUs Available</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-num">OEM</span>
-        <span class="stat-label">Grade Quality</span>
+        <span class="stat-label" data-i18n="marine.stat3">Grade Quality</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-num">24/7</span>
-        <span class="stat-label">Emergency Support</span>
+        <span class="stat-label" data-i18n="marine.stat4">Emergency Support</span>
       </div>
     </div>
   </div>
@@ -482,9 +480,9 @@
 <!-- ── CATEGORIES ── -->
 <section class="cat-section" aria-labelledby="cat-heading">
   <div class="container">
-    <span class="section-eyebrow">Product Categories</span>
-    <h2 id="cat-heading" class="section-heading">Everything Your Vessel Needs</h2>
-    <p class="section-sub">From engineroom to bridge — a comprehensive range of spare parts covering every critical system aboard commercial vessels and offshore platforms.</p>
+    <span class="section-eyebrow" data-i18n="marine.cat.eyebrow">Product Categories</span>
+    <h2 id="cat-heading" class="section-heading" data-i18n="marine.cat.h2">Everything Your Vessel Needs</h2>
+    <p class="section-sub" data-i18n="marine.cat.sub">From engineroom to bridge — a comprehensive range of spare parts covering every critical system aboard commercial vessels and offshore platforms.</p>
 
     <div class="cat-grid" id="catGrid">
 
@@ -492,70 +490,70 @@
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
         </div>
-        <h3>Main &amp; Auxiliary Engines</h3>
+        <h3 data-i18n="marine.catitem1">Main &amp; Auxiliary Engines</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <h3>Turbochargers</h3>
+        <h3 data-i18n="marine.catitem2">Turbochargers</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
-        <h3>Pumps</h3>
+        <h3 data-i18n="marine.catitem3">Pumps</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
         </div>
-        <h3>Purifiers &amp; Separators</h3>
+        <h3 data-i18n="marine.catitem4">Purifiers &amp; Separators</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
         </div>
-        <h3>Compressors</h3>
+        <h3 data-i18n="marine.catitem5">Compressors</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
         </div>
-        <h3>Valves</h3>
+        <h3 data-i18n="marine.catitem6">Valves</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
-        <h3>Instrumentation</h3>
+        <h3 data-i18n="marine.catitem7">Instrumentation</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <h3>Electrical</h3>
+        <h3 data-i18n="marine.catitem8">Electrical</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
         </div>
-        <h3>Deck Machinery</h3>
+        <h3 data-i18n="marine.catitem9">Deck Machinery</h3>
       </div>
 
       <div class="cat-card">
         <div class="cat-icon" aria-hidden="true">
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h3>Safety Items</h3>
+        <h3 data-i18n="marine.catitem10">Safety Items</h3>
       </div>
 
     </div>
@@ -566,9 +564,9 @@
 <!-- ── GALLERY ── -->
 <section class="anim-gallery reveal" aria-labelledby="gallery-heading">
   <div class="container">
-    <span class="section-eyebrow">Product Range</span>
-    <h2 id="gallery-heading" class="section-heading">Key Parts We Supply</h2>
-    <p class="section-sub">Sourced from leading manufacturers — pistons and liners, turbocharger kits, centrifugal pumps, fuel/lube purifiers, air compressors, deck winches and certified safety equipment.</p>
+    <span class="section-eyebrow" data-i18n="marine.gallery.eyebrow">Product Range</span>
+    <h2 id="gallery-heading" class="section-heading" data-i18n="marine.gallery.h2">Key Parts We Supply</h2>
+    <p class="section-sub" data-i18n="marine.gallery.sub">Sourced from leading manufacturers — pistons and liners, turbocharger kits, centrifugal pumps, fuel/lube purifiers, air compressors, deck winches and certified safety equipment.</p>
 
     <div class="gallery-grid">
 
@@ -578,9 +576,9 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Engine Parts</div>
-          <div class="gallery-card-title">Main &amp; Auxiliary Engines</div>
-          <p class="gallery-card-text">Pistons, liners, bearings, cylinder heads and turbocharger assemblies from MAN, Wärtsilä, Caterpillar, YANMAR and Daihatsu.</p>
+          <div class="gallery-tag" data-i18n="marine.g1.tag">Engine Parts</div>
+          <div class="gallery-card-title" data-i18n="marine.g1.title">Main &amp; Auxiliary Engines</div>
+          <p class="gallery-card-text" data-i18n="marine.g1.desc">Pistons, liners, bearings, cylinder heads and turbocharger assemblies from MAN, Wärtsilä, Caterpillar, YANMAR and Daihatsu.</p>
         </div>
       </div>
 
@@ -590,9 +588,9 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/67840/ship-crane-harbor-load-67840.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Deck &amp; Navigation</div>
-          <div class="gallery-card-title">Deck Machinery &amp; Safety Gear</div>
-          <p class="gallery-card-text">Winches, windlasses, cranes, navigation equipment and certified life-saving safety items for all vessel types.</p>
+          <div class="gallery-tag" data-i18n="marine.g2.tag">Deck &amp; Navigation</div>
+          <div class="gallery-card-title" data-i18n="marine.g2.title">Deck Machinery &amp; Safety Gear</div>
+          <p class="gallery-card-text" data-i18n="marine.g2.desc">Winches, windlasses, cranes, navigation equipment and certified life-saving safety items for all vessel types.</p>
         </div>
       </div>
 
@@ -602,9 +600,9 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Pump &amp; Valve</div>
-          <div class="gallery-card-title">Pumps, Valves &amp; Purifiers</div>
-          <p class="gallery-card-text">Centrifugal, gear and screw pump assemblies; gate, globe and butterfly valves; fuel &amp; lube oil purifier service parts.</p>
+          <div class="gallery-tag" data-i18n="marine.g3.tag">Pump &amp; Valve</div>
+          <div class="gallery-card-title" data-i18n="marine.g3.title">Pumps, Valves &amp; Purifiers</div>
+          <p class="gallery-card-text" data-i18n="marine.g3.desc">Centrifugal, gear and screw pump assemblies; gate, globe and butterfly valves; fuel &amp; lube oil purifier service parts.</p>
         </div>
       </div>
 
@@ -614,9 +612,9 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Electrical &amp; Automation</div>
-          <div class="gallery-card-title">Electrical, Instrumentation &amp; Control</div>
-          <p class="gallery-card-text">Switchboards, motors, cables, compressors, pressure gauges, flow meters and automation control systems from ABB and Mitsubishi.</p>
+          <div class="gallery-tag" data-i18n="marine.g4.tag">Electrical &amp; Automation</div>
+          <div class="gallery-card-title" data-i18n="marine.g4.title">Electrical, Instrumentation &amp; Control</div>
+          <p class="gallery-card-text" data-i18n="marine.g4.desc">Switchboards, motors, cables, compressors, pressure gauges, flow meters and automation control systems from ABB and Mitsubishi.</p>
         </div>
       </div>
 
@@ -637,15 +635,15 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="why-img-badge">
-          <strong>Marine Specialists</strong>
-          Serving Saudi Arabia's fleet
+          <strong data-i18n="marine.why.badge.strong">Marine Specialists</strong>
+          <span data-i18n="marine.why.badge.sub">Serving Saudi Arabia's fleet</span>
         </div>
       </div>
 
       <div class="reveal-right">
-        <span class="section-eyebrow" style="color:#5EEAD4;">Why Choose Us</span>
-        <h2 id="why-heading" class="section-heading" style="color:#fff;">Your Trusted Marine Parts Partner</h2>
-        <p style="color:rgba(255,255,255,0.6);font-size:0.94rem;line-height:1.75;margin-bottom:24px;">
+        <span class="section-eyebrow" style="color:#5EEAD4;" data-i18n="marine.why.eyebrow">Why Choose Us</span>
+        <h2 id="why-heading" class="section-heading" style="color:#fff;" data-i18n="marine.why.h2">Your Trusted Marine Parts Partner</h2>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.94rem;line-height:1.75;margin-bottom:24px;" data-i18n="marine.why.p">
           We combine deep technical knowledge of marine systems with an established supplier network — giving you fast access to the right part at the right price, with none of the cross-border complexity.
         </p>
 
@@ -655,8 +653,8 @@
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
             <div>
-              <h4>Cross-Maker Coverage</h4>
-              <p>Parts for MAN, Wartsila, Caterpillar, Mitsubishi, Alfa Laval, and all major marine equipment makers.</p>
+              <h4 data-i18n="marine.why1.h4">Cross-Maker Coverage</h4>
+              <p data-i18n="marine.why1.p">Parts for MAN, Wartsila, Caterpillar, Mitsubishi, Alfa Laval, and all major marine equipment makers.</p>
             </div>
           </div>
           <div class="why-point">
@@ -664,8 +662,8 @@
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <div>
-              <h4>Emergency Expediting</h4>
-              <p>AOG-style rapid sourcing for critical breakdowns — minimising vessel off-hire time and financial exposure.</p>
+              <h4 data-i18n="marine.why2.h4">Emergency Expediting</h4>
+              <p data-i18n="marine.why2.p">AOG-style rapid sourcing for critical breakdowns — minimising vessel off-hire time and financial exposure.</p>
             </div>
           </div>
           <div class="why-point">
@@ -673,14 +671,14 @@
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
             </div>
             <div>
-              <h4>Full Import Handling</h4>
-              <p>Customs clearance, SASO documentation, and delivery to your berth or warehouse — one point of contact, start to finish.</p>
+              <h4 data-i18n="marine.why3.h4">Full Import Handling</h4>
+              <p data-i18n="marine.why3.p">Customs clearance, SASO documentation, and delivery to your berth or warehouse — one point of contact, start to finish.</p>
             </div>
           </div>
         </div>
 
         <div style="margin-top:32px;">
-          <a href="contact.html" class="btn btn-primary">Request a Quote →</a>
+          <a href="contact.html?tab=product#form-product" class="btn btn-primary" data-i18n="common.requestQuoteArrow" onclick="sessionStorage.setItem('selectedProduct','marine-spare-parts')">Request a Quote →</a>
         </div>
       </div>
 
@@ -695,10 +693,10 @@
     <div class="cta-anchor-icon" aria-hidden="true">
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
     </div>
-    <h2 id="cta-heading">Need a Part for Your Vessel?</h2>
-    <p>Share your parts list, maker name, or part number and our team will source, quote and deliver — fast.</p>
-    <a href="contact.html" class="btn-cta">
-      Submit Your Parts List
+    <h2 id="cta-heading" data-i18n="marine.cta.h2">Need a Part for Your Vessel?</h2>
+    <p data-i18n="marine.cta.p">Share your parts list, maker name, or part number and our team will source, quote and deliver — fast.</p>
+    <a href="contact.html?tab=product#form-product" class="btn-cta" onclick="sessionStorage.setItem('selectedProduct','marine-spare-parts')">
+      <span data-i18n="marine.cta.btn">Submit Your Parts List</span>
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
     </a>
   </div>
@@ -724,11 +722,11 @@
       <div class="footer-col">
         <h5 data-i18n="footer.company">Company</h5>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="servcies.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="servcies.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -737,7 +735,7 @@
           <div class="icon" aria-hidden="true">
             <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </div>
-          <a href="mailto:yousef.es@efficientsolutionsksa.com">yousef.es@efficientsolutionsksa.com</a>
+          <a href="mailto:Sales@efficientsolutionsksa.com">            <span data-i18n="contact.email.val">Sales@efficientsolutionsksa.com</span> </a>
         </div>
         <div class="footer-contact-item">
           <div class="icon" aria-hidden="true">
@@ -754,8 +752,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 Efficient Solutions. All rights reserved.</span>
-      <a href="#">Privacy Policy</a>
+      <span data-i18n="footer.rights">&copy; 2025 Efficient Solutions. All rights reserved.</span>
+      <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
     </div>
   </div>
 </footer>

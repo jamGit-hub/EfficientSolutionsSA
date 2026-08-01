@@ -26,19 +26,26 @@
       align-items: center;
       overflow: hidden;
     }
+    
     .hero-video-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      
       z-index: 0;
+
     }
     .hero-video-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to right, rgba(11,31,58,0.96) 38%, rgba(11,31,58,0.55) 100%);
       z-index: 1;
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
     .anim-hero-content {
       position: relative; z-index: 2;
@@ -61,16 +68,19 @@
       background: rgba(94,234,212,0.12);
       border: 1px solid rgba(94,234,212,0.3);
       padding: 5px 14px; border-radius: 50px; margin-bottom: 20px;
+      animation: fadeSlideUp 0.7s ease both 0.2s;
     }
     .anim-hero h1 {
       font-size: clamp(2rem, 4.5vw, 3.4rem);
       font-weight: 800; color: #fff; line-height: 1.15;
       max-width: 580px; margin-bottom: 20px; letter-spacing: -0.02em;
+      animation: fadeSlideUp 0.7s ease both 0.35s;
     }
     .anim-hero h1 .teal { color: #5EEAD4; }
     .anim-hero-desc {
       color: rgba(255,255,255,0.7); font-size: 1.05rem;
       max-width: 500px; line-height: 1.75; margin-bottom: 36px;
+      animation: fadeSlideUp 0.7s ease both 0.5s;
     }
     .hero-partner-badge {
       display: inline-flex; align-items: center; gap: 10px;
@@ -79,6 +89,7 @@
       backdrop-filter: blur(10px);
       padding: 10px 18px; border-radius: 12px;
       font-size: 0.82rem; color: rgba(255,255,255,0.8);
+      animation: fadeSlideUp 0.7s ease both 0.65s;
     }
 
     /* ── SECTION UTILITIES ── */
@@ -290,19 +301,19 @@
       <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
       <li class="nav-dropdown">
-        <a href="products.html" data-i18n="nav.products" class="active">Products</a>
+        <a href="products.html" data-i18n="nav.products" class="active">Products</a><div class="dropdown-arrow"></div>
         <ul class="dropdown-menu">
-          <li><a href="products.html?section=mechanical">Mechanical</a></li>
-          <li><a href="products.html?section=electrical">Electrical</a></li>
-          <li><a href="products.html?section=instrumental">Control &amp; Instrumentation</a></li>
+          <li><a href="products.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
+          <li><a href="products.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
+          <li><a href="products.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
-        <a href="servcies.html" data-i18n="nav.services">Services</a>
+        <a href="servcies.html" data-i18n="nav.services">Services</a><div class="dropdown-arrow"></div>
         <ul class="dropdown-menu">
-          <li><a href="servcies.html?section=mechanical">Mechanical</a></li>
-          <li><a href="servcies.html?section=electrical">Electrical</a></li>
-          <li><a href="servcies.html?section=instrumental">Control &amp; Instrumentation</a></li>
+          <li><a href="servcies.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
+          <li><a href="servcies.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
+          <li><a href="servcies.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
         </ul>
       </li>
       <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
@@ -351,23 +362,23 @@
       <span aria-hidden="true">›</span>
       <a href="products.html" data-i18n="nav.products">Products</a>
       <span aria-hidden="true">›</span>
-      <span style="color:rgba(255,255,255,0.7)">Industrial Control Transformers</span>
+      <span style="color:rgba(255,255,255,0.7)" data-i18n="ict.breadcrumb">Industrial Control Transformers</span>
     </nav>
 
-    <span class="hero-eyebrow">Industrial Power Solutions</span>
+    <span class="hero-eyebrow" data-i18n="ict.hero.eyebrow">Industrial Power Solutions</span>
 
     <h1>
-      Industrial Control<br />
-      <span class="teal">Transformers</span>
+      <span data-i18n="ict.hero.h1a">Industrial Control</span><br />
+      <span class="teal" data-i18n="ict.hero.h1b">Transformers</span>
     </h1>
 
-    <p class="anim-hero-desc">
+    <p class="anim-hero-desc" data-i18n="ict.hero.desc">
       Precision-engineered step-down transformers for industrial control circuits — single-phase, three-phase, and fully custom configurations supplied direct to Saudi Arabia.
     </p>
 
     <div class="hero-partner-badge">
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#5EEAD4" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-      CE &amp; ISO 9001 Certified · Korea
+      <span data-i18n="ict.hero.badge">CE &amp; ISO 9001 Certified · Korea</span>
     </div>
 
   </div>
@@ -378,9 +389,9 @@
 <section class="anim-section reveal" aria-labelledby="ict-apps-h2">
   <div class="container">
 
-    <span class="section-eyebrow">Applications</span>
-    <h2 id="ict-apps-h2" class="section-heading">Where Control Transformers Are Used</h2>
-    <p class="section-sub">From machine tool panels to outdoor substations — built for the full range of industrial control circuit demands.</p>
+    <span class="section-eyebrow" data-i18n="ict.apps.eyebrow">Applications</span>
+    <h2 id="ict-apps-h2" class="section-heading" data-i18n="ict.apps.h2">Where Control Transformers Are Used</h2>
+    <p class="section-sub" data-i18n="ict.apps.sub">From machine tool panels to outdoor substations — built for the full range of industrial control circuit demands.</p>
 
     <div class="application-grid">
 
@@ -388,48 +399,48 @@
         <div class="app-card-icon" aria-hidden="true">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
         </div>
-        <h3>Machine Tool Control Panels</h3>
-        <p>Powering control circuits in CNC machines, lathes, and milling equipment — providing safe, isolated low-voltage supply to PLC inputs and relay coils.</p>
+        <h3 data-i18n="ict.app1.h3">Machine Tool Control Panels</h3>
+        <p data-i18n="ict.app1.p">Powering control circuits in CNC machines, lathes, and milling equipment — providing safe, isolated low-voltage supply to PLC inputs and relay coils.</p>
       </div>
 
       <div class="app-card reveal">
         <div class="app-card-icon" aria-hidden="true">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <h3>Industrial Automation Systems</h3>
-        <p>Supplying stable, isolated power to PLC racks, relay-based logic systems, and SCADA interface equipment across automated production lines.</p>
+        <h3 data-i18n="ict.app2.h3">Industrial Automation Systems</h3>
+        <p data-i18n="ict.app2.p">Supplying stable, isolated power to PLC racks, relay-based logic systems, and SCADA interface equipment across automated production lines.</p>
       </div>
 
       <div class="app-card reveal">
         <div class="app-card-icon" aria-hidden="true">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
         </div>
-        <h3>Harsh Environment Installations</h3>
-        <p>Dual-cover sealed designs rated for high humidity, dust ingress, and heavy vibration — ideal for outdoor substations and processing plant environments.</p>
+        <h3 data-i18n="ict.app3.h3">Harsh Environment Installations</h3>
+        <p data-i18n="ict.app3.p">Dual-cover sealed designs rated for high humidity, dust ingress, and heavy vibration — ideal for outdoor substations and processing plant environments.</p>
       </div>
 
       <div class="app-card reveal">
         <div class="app-card-icon" aria-hidden="true">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
         </div>
-        <h3>MCC &amp; Control Panel Assemblies</h3>
-        <p>Integrated into motor control centres and custom electrical panels — delivering the 24 V or 120 V control voltage that switchgear and protection relays demand.</p>
+        <h3 data-i18n="ict.app4.h3">MCC &amp; Control Panel Assemblies</h3>
+        <p data-i18n="ict.app4.p">Integrated into motor control centres and custom electrical panels — delivering the 24 V or 120 V control voltage that switchgear and protection relays demand.</p>
       </div>
 
       <div class="app-card reveal">
         <div class="app-card-icon" aria-hidden="true">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h3>Safety Circuit Isolation</h3>
-        <p>Galvanic isolation between high-voltage supply and operator-accessible control circuits — protecting personnel and sensitive instrumentation from fault currents.</p>
+        <h3 data-i18n="ict.app5.h3">Safety Circuit Isolation</h3>
+        <p data-i18n="ict.app5.p">Galvanic isolation between high-voltage supply and operator-accessible control circuits — protecting personnel and sensitive instrumentation from fault currents.</p>
       </div>
 
       <div class="app-card reveal">
         <div class="app-card-icon" aria-hidden="true">
           <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
-        <h3>Custom Panel Builds</h3>
-        <p>Available in any VA rating, primary/secondary voltage combination, and enclosure class — designed to spec for bespoke panel builders and system integrators.</p>
+        <h3 data-i18n="ict.app6.h3">Custom Panel Builds</h3>
+        <p data-i18n="ict.app6.p">Available in any VA rating, primary/secondary voltage combination, and enclosure class — designed to spec for bespoke panel builders and system integrators.</p>
       </div>
 
     </div>
@@ -441,9 +452,9 @@
 <section class="anim-gallery reveal" aria-labelledby="ict-range-h2">
   <div class="container">
 
-    <span class="section-eyebrow">Product Range</span>
-    <h2 id="ict-range-h2" class="section-heading">Six Types for Every Application</h2>
-    <p class="section-sub">Six distinct control transformer configurations — each precision-wound for reliable industrial service with custom terminal blocks for safe wiring.</p>
+    <span class="section-eyebrow" data-i18n="ict.range.eyebrow">Product Range</span>
+    <h2 id="ict-range-h2" class="section-heading" data-i18n="ict.range.h2">Six Types for Every Application</h2>
+    <p class="section-sub" data-i18n="ict.range.sub">Six distinct control transformer configurations — each precision-wound for reliable industrial service with custom terminal blocks for safe wiring.</p>
 
     <div class="gallery-grid">
 
@@ -453,8 +464,8 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Single-Phase</div>
-          <div>Single-Phase Control Transformer</div>
+          <div class="gallery-tag" data-i18n="ict.g1.tag">Single-Phase</div>
+          <div data-i18n="ict.g1.title">Single-Phase Control Transformer</div>
         </div>
       </div>
 
@@ -464,8 +475,8 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Three-Phase</div>
-          <div>Three-Phase Control Transformer</div>
+          <div class="gallery-tag" data-i18n="ict.g2.tag">Three-Phase</div>
+          <div data-i18n="ict.g2.title">Three-Phase Control Transformer</div>
         </div>
       </div>
 
@@ -475,8 +486,8 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Dual-Cover</div>
-          <div>Harsh Environment Sealed Type</div>
+          <div class="gallery-tag" data-i18n="ict.g3.tag">Dual-Cover</div>
+          <div data-i18n="ict.g3.title">Harsh Environment Sealed Type</div>
         </div>
       </div>
 
@@ -486,8 +497,8 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Band-Type</div>
-          <div>Band-Type Compact Transformer</div>
+          <div class="gallery-tag" data-i18n="ict.g4.tag">Band-Type</div>
+          <div data-i18n="ict.g4.title">Band-Type Compact Transformer</div>
         </div>
       </div>
 
@@ -497,8 +508,8 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Blade-Type</div>
-          <div>Blade Transformer — Low Secondary Voltage</div>
+          <div class="gallery-tag" data-i18n="ict.g5.tag">Blade-Type</div>
+          <div data-i18n="ict.g5.title">Blade Transformer — Low Secondary Voltage</div>
         </div>
       </div>
 
@@ -508,8 +519,8 @@
              loading="lazy"
              onerror="this.src='https://images.pexels.com/photos/442151/pexels-photo-442151.jpeg?auto=compress&cs=tinysrgb&w=800'" />
         <div class="gallery-overlay">
-          <div class="gallery-tag">Industrial Case</div>
-          <div>Case-Type Three-Phase Auto Transformer</div>
+          <div class="gallery-tag" data-i18n="ict.g6.tag">Industrial Case</div>
+          <div data-i18n="ict.g6.title">Case-Type Three-Phase Auto Transformer</div>
         </div>
       </div>
 
@@ -530,15 +541,15 @@
              loading="lazy"
              onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80'" />
         <div class="why-anim-img-badge">
-          <strong>Korean Manufacturer</strong>
-          Control Transformer Specialist
+          <strong data-i18n="ict.why.badge.strong">Korean Manufacturer</strong>
+          <span data-i18n="ict.why.badge.sub">Control Transformer Specialist</span>
         </div>
       </div>
 
       <div class="reveal-right">
-        <span class="section-eyebrow">Why Choose Us</span>
-        <h2 id="ict-why-h2" class="section-heading" style="color: #fff;">40 Years of Precision Transformer Manufacturing</h2>
-        <p style="color:#fff;font-size:0.94rem;line-height:1.7;margin-bottom:24px;">
+        <span class="section-eyebrow" data-i18n="ict.why.eyebrow">Why Choose Us</span>
+        <h2 id="ict-why-h2" class="section-heading" style="color: #fff;" data-i18n="ict.why.h2">40 Years of Precision Transformer Manufacturing</h2>
+        <p style="color:#fff;font-size:0.94rem;line-height:1.7;margin-bottom:24px;" data-i18n="ict.why.p">
           Our manufacturing partner has spent over four decades perfecting the design and manufacture of industrial control transformers — with CE certification and ISO 9001 quality management embedded in every unit we supply to Saudi Arabia's industrial sector.
         </p>
 
@@ -549,8 +560,8 @@
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
             <div>
-              <h4>CE &amp; ISO 9001 Certified</h4>
-              <p>Every transformer meets European CE standards and is manufactured under a certified ISO 9001 quality management system.</p>
+              <h4 data-i18n="ict.why1.h4">CE &amp; ISO 9001 Certified</h4>
+              <p data-i18n="ict.why1.p">Every transformer meets European CE standards and is manufactured under a certified ISO 9001 quality management system.</p>
             </div>
           </div>
 
@@ -559,8 +570,8 @@
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
             <div>
-              <h4>Fully Custom Configurations</h4>
-              <p>Any voltage ratio, VA rating, phase count, and enclosure class — designed to your exact specification, including low-volume orders.</p>
+              <h4 data-i18n="ict.why2.h4">Fully Custom Configurations</h4>
+              <p data-i18n="ict.why2.p">Any voltage ratio, VA rating, phase count, and enclosure class — designed to your exact specification, including low-volume orders.</p>
             </div>
           </div>
 
@@ -569,15 +580,15 @@
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
             </div>
             <div>
-              <h4>Direct Supply to Saudi Arabia</h4>
-              <p>Efficient Solutions manages all import logistics, documentation, and delivery — a single point of contact from factory to your panel room.</p>
+              <h4 data-i18n="ict.why3.h4">Direct Supply to Saudi Arabia</h4>
+              <p data-i18n="ict.why3.p">Efficient Solutions manages all import logistics, documentation, and delivery — a single point of contact from factory to your panel room.</p>
             </div>
           </div>
 
         </div>
 
         <div style="margin-top:32px;">
-          <a href="contact.html" class="btn btn-primary">Request a Quote →</a>
+          <a href="contact.html?tab=product#form-product" class="btn btn-primary" data-i18n="common.requestQuoteArrow" onclick="sessionStorage.setItem('selectedProduct','industrial-control-transformers')">Request a Quote →</a>
         </div>
       </div>
 
@@ -594,14 +605,14 @@
       <div class="partner-logo-dot">
         <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
       </div>
-      <span class="partner-logo-name">Control Transformers</span>
+      <span class="partner-logo-name" data-i18n="ict.partner.name">Control Transformers</span>
     </div>
 
-    <h2 id="ict-partner-h2">Ready to Specify Your Transformer?</h2>
-    <p style="color: #0f766e;">Share your voltage, VA rating, and application — our team will configure the right unit and deliver it to your site in Saudi Arabia.</p>
+    <h2 id="ict-partner-h2" data-i18n="ict.partner.h2">Ready to Specify Your Transformer?</h2>
+    <p style="color: #0f766e;" data-i18n="ict.partner.p">Share your voltage, VA rating, and application — our team will configure the right unit and deliver it to your site in Saudi Arabia.</p>
 
-    <a href="contact.html" class="btn-cta">
-      Request a Quote
+    <a href="contact.html?tab=product#form-product" class="btn-cta" onclick="sessionStorage.setItem('selectedProduct','industrial-control-transformers')">
+      <span data-i18n="common.requestQuote">Request a Quote</span>
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
     </a>
 
@@ -644,7 +655,8 @@
           <div class="icon" aria-hidden="true">
             <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </div>
-          <a href="mailto:yousef.es@efficientsolutionsksa.com">yousef.es@efficientsolutionsksa.com</a>
+          
+          <a href="mailto:Sales@efficientsolutionsksa.com">            <span data-i18n="contact.email.val">Sales@efficientsolutionsksa.com</span> </a>
         </div>
         <div class="footer-contact-item">
           <div class="icon" aria-hidden="true">
