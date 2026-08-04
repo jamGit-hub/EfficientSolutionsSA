@@ -361,12 +361,10 @@ const translations = {
     'svcpage.e5.desc':  'Infrared thermal imaging carried out by ITC-certified thermographers to detect faults before they cause failure.',
     'svcpage.e5.tag':   'ITC Certified',
     'svcpage.i1.badge':   'Automation',
-    'svcpage.i1.partner': '3PH Tech Services',
     'svcpage.i1.title':   'PLC & SCADA Systems',
     'svcpage.i1.desc':    'Development & integration with Schneider, SIEMENS, GE-Fanuc, and Rockwell Automation platforms.',
     'svcpage.i1.tag':     'Automation',
     'svcpage.i2.badge':   'Monitoring',
-    'svcpage.i2.partner': '3PH Tech Solutions',
     'svcpage.i2.title':   'DAVAS - Data Acquisition & Visualization',
     'svcpage.i2.desc':    'Energy management and condition monitoring for electrical and mechanical assets.',
     'svcpage.i2.tag':     'Monitoring',
@@ -1093,12 +1091,10 @@ const translations = {
     'svcpage.e5.desc':  'تصوير حراري بالأشعة تحت الحمراء ينفذه فنيون معتمدون من ITC للكشف عن الأعطال قبل وقوعها.',
     'svcpage.e5.tag':   'معتمد ITC',
     'svcpage.i1.badge':   'الأتمتة',
-    'svcpage.i1.partner': '3PH Tech Services',
     'svcpage.i1.title':   'أنظمة PLC وSCADA',
     'svcpage.i1.desc':    'تطوير وتكامل مع منصات Schneider وSIEMENS وGE-Fanuc وRockwell Automation.',
     'svcpage.i1.tag':     'الأتمتة',
     'svcpage.i2.badge':   'المراقبة',
-    'svcpage.i2.partner': '3PH Tech Solutions',
     'svcpage.i2.title':   'DAVAS - جمع البيانات وتصويرها',
     'svcpage.i2.desc':    'إدارة الطاقة ومراقبة حالة الأصول الكهربائية والميكانيكية.',
     'svcpage.i2.tag':     'المراقبة',
@@ -1527,6 +1523,12 @@ function initMobileMenu() {
   const mobileNav = $('.mobile-nav');
   if (!hamburger || !mobileNav) return;
 
+  const closeMenu = () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  };
+
   hamburger.addEventListener('click', () => {
     const open = hamburger.classList.toggle('open');
     mobileNav.classList.toggle('open', open);
@@ -1535,10 +1537,14 @@ function initMobileMenu() {
 
   /* Close when a link is clicked */
   $$('.mobile-nav a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileNav.classList.remove('open');
-    });
+    a.addEventListener('click', closeMenu);
+  });
+
+  /* Close automatically when the window is stretched back to desktop width
+     (matches the .nav-links/.hamburger breakpoint in style.css) */
+  const desktopQuery = window.matchMedia('(min-width: 1025px)');
+  desktopQuery.addEventListener('change', (e) => {
+    if (e.matches) closeMenu();
   });
 }
 
