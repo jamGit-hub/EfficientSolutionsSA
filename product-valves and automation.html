@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automated industrial valves (MOV, ESD, On-Off, Control, Cryogenic), instrument control and automation systems, and integrated process equipment — supplied to Saudi Arabia from a proven Korean valve group." />
+  <meta property="og:title" content="Industrial Valves & Automation | Efficient Solutions" />
+  <meta property="og:description" content="MOV, ESD, On-Off, Control and Cryogenic valves, ESD and wellhead control systems, plus fired heaters, industrial fans and storage tanks for oil & gas, petrochemical and power projects." />
+  <meta property="og:type" content="website" />
+  <Link rel="icon" type="image/png" href="IconOnly.png">
+  <title>Industrial Valves &amp; Automation | Efficient Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── HERO ── */
+    .anim-hero {
+      position: relative; min-height: 580px;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-bg {
+        position: absolute; inset: 0;
+      background:
+        url('images/valves/hero-automated-ball-valves.jpg') center/cover no-repeat;
+      transform: scale(1.04);
+      animation: slowPan 22s ease-in-out infinite alternate;
+    }
+    @keyframes slowPan { from { transform: scale(1.06) translateX(0); } to { transform: scale(1.06) translateX(-3%); } }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(115deg, rgba(7,22,44,0.97) 25%, rgba(7,22,44,0.6) 60%, rgba(0,80,100,0.45) 100%);
+    }
+    .hero-particles {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+    }
+    .hero-particles span {
+      position: absolute; width: 2px; height: 2px;
+      background: #5EEAD4; border-radius: 50%; opacity: 0;
+      animation: particle 8s linear infinite;
+    }
+    .hero-particles span:nth-child(1)  { left: 10%; animation-delay: 0s;   animation-duration: 9s;  }
+    .hero-particles span:nth-child(2)  { left: 25%; animation-delay: 2s;   animation-duration: 7s;  }
+    .hero-particles span:nth-child(3)  { left: 40%; animation-delay: 4s;   animation-duration: 11s; }
+    .hero-particles span:nth-child(4)  { left: 60%; animation-delay: 1s;   animation-duration: 8s;  }
+    .hero-particles span:nth-child(5)  { left: 75%; animation-delay: 3s;   animation-duration: 10s; }
+    .hero-particles span:nth-child(6)  { left: 88%; animation-delay: 5s;   animation-duration: 7s;  }
+    @keyframes particle {
+      0%   { bottom: -10px; opacity: 0; }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.3; }
+      100% { bottom: 110%; opacity: 0; }
+    }
+    .hero-wave {
+      position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3;
+    }
+    .anim-hero-content {
+      position: relative; z-index: 4;
+      max-width: 1200px; margin: 0 auto;
+      padding: 140px 24px 100px; width: 100%;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 28px; font-size: 0.78rem; color: rgba(255,255,255,0.45);
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #5EEAD4; }
+    .breadcrumb span { color: rgba(255,255,255,0.25); }
+    .hero-eyebrow {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #5EEAD4;
+      background: rgba(94,234,212,0.12); border: 1px solid rgba(94,234,212,0.3);
+      padding: 5px 14px; border-radius: 50px; margin-bottom: 20px;
+      animation: fadeSlideUp 0.7s ease both 0.2s;
+    }
+    .anim-hero h1 {
+      font-size: clamp(2.1rem, 4.8vw, 3.6rem);
+      font-weight: 800; color: #fff; line-height: 1.12;
+      max-width: 620px; margin-bottom: 20px; letter-spacing: -0.02em;
+      animation: fadeSlideUp 0.7s ease both 0.35s;
+    }
+    .anim-hero h1 .teal { color: #5EEAD4; }
+    .anim-hero-desc {
+      color: rgba(255,255,255,0.72); font-size: 1.05rem;
+      max-width: 520px; line-height: 1.78; margin-bottom: 38px;
+      animation: fadeSlideUp 0.7s ease both 0.5s;
+    }
+    .hero-badges {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      animation: fadeSlideUp 0.7s ease both 0.65s;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px); padding: 9px 16px; border-radius: 10px;
+      font-size: 0.8rem; color: rgba(255,255,255,0.82);
+    }
+    .hero-badge svg { color: #5EEAD4; flex-shrink: 0; }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTION UTILITIES ── */
+    .section-eyebrow {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 10px; display: block;
+    }
+    .section-heading {
+      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+      color: var(--navy); margin-bottom: 14px; letter-spacing: -0.02em;
+    }
+    .section-sub {
+      color: var(--muted); font-size: 1rem;
+      max-width: 520px; margin-bottom: 50px; line-height: 1.7;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: #0B1F3A; padding: 28px 0;
+      border-bottom: 1px solid rgba(94,234,212,0.12);
+    }
+    .stats-bar .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .stats-inner {
+      display: flex; justify-content: space-around; align-items: center;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-size: 2rem; font-weight: 800; color: #5EEAD4;
+      line-height: 1; margin-bottom: 4px; display: block;
+    }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+    .stat-divider { width: 1px; height: 44px; background: rgba(255,255,255,0.1); }
+
+    /* ── CATEGORIES ── */
+    .cat-section { padding: 90px 0; background: #F8FAFB; }
+    .cat-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .cat-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 18px; margin-top: 8px;
+    }
+    .cat-card {
+      background: #fff; border-radius: 16px;
+      border: 1px solid rgba(11,31,58,0.07);
+      padding: 26px 20px; text-align: center;
+      box-shadow: 0 4px 16px rgba(11,31,58,0.05);
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s, border-color 0.25s;
+      cursor: default;
+      opacity: 0; transform: translateY(24px);
+    }
+    .cat-card.revealed {
+      animation: cardIn 0.5s ease forwards;
+    }
+    @keyframes cardIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cat-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(11,31,58,0.12);
+      border-color: var(--green);
+    }
+    .cat-icon {
+      width: 52px; height: 52px; background: rgba(15,118,110,0.1);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      color: var(--green); margin: 0 auto 14px; transition: 0.3s;
+    }
+    .cat-card:hover .cat-icon { background: var(--green); color: #fff; transform: rotate(-4deg) scale(1.1); }
+    .cat-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin: 0; }
+
+    /* ── GALLERY ── */
+    .anim-gallery { padding: 88px 0; background: #fff; }
+    .anim-gallery .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .gallery-card {
+      border-radius: 18px; overflow: hidden; position: relative;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+      transition: 0.35s cubic-bezier(0.34,1.3,0.64,1); background: var(--navy);
+    }
+    .gallery-card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 55px rgba(0,0,0,0.18); }
+    .gallery-card img {
+      width: 100%; height: 300px; object-fit: cover;
+      transition: 0.45s ease; opacity: 0.82; display: block;
+    }
+    .gallery-card:hover img { transform: scale(1.08); opacity: 1; }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 24px 20px;
+      background: linear-gradient(to top, rgba(7,22,44,0.96) 0%, rgba(7,22,44,0.3) 55%, transparent 100%);
+      color: #fff; font-family: 'Poppins', sans-serif;
+    }
+    .gallery-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #fff;
+      background: #0f766e; padding: 5px 14px;
+      border-radius: 6px; margin-bottom: 10px; width: fit-content;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .gallery-card-title {
+      font-size: 1.05rem; font-weight: 700; color: #fff;
+      line-height: 1.3; margin: 0 0 8px;
+    }
+    .gallery-card-text {
+      font-size: 0.84rem; color: rgba(255,255,255,0.7);
+      line-height: 1.6; margin: 0;
+      max-height: 0; overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.35s ease;
+    }
+    .gallery-card:hover .gallery-card-text {
+      max-height: 80px; opacity: 1;
+    }
+
+    /* ── PROCESS ── */
+    .process-section { padding: 88px 0; background: var(--navy); position: relative; overflow: hidden; }
+    .process-section::before {
+      content: ''; position: absolute; top: -120px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(94,234,212,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .process-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; }
+    .process-section .section-eyebrow { color: #5EEAD4; }
+    .process-section .section-heading { color: #fff; }
+    .process-section .section-sub { color: rgba(255,255,255,0.52); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 36px 0; position: relative; margin-top: 16px;
+    }
+    .proc-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .proc-num {
+      width: 60px; height: 60px;
+      background: rgba(255,255,255,0.05); border: 2px solid rgba(94,234,212,0.3);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px; font-family: 'Poppins', sans-serif;
+      font-size: 1rem; font-weight: 700; color: #5EEAD4; transition: 0.3s;
+    }
+    .proc-step:hover .proc-num { background: var(--green); border-color: var(--green); color: #fff; transform: scale(1.08); }
+    .proc-step h4 { color: #fff; font-size: 0.88rem; margin-bottom: 6px; }
+    .proc-step p  { color: rgba(255,255,255,0.48); font-size: 0.78rem; line-height: 1.55; }
+    .process-lead-note {
+      margin-top: 56px; padding: 22px 26px; border-radius: 14px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.6); font-size: 0.86rem; line-height: 1.7;
+    }
+    .process-lead-note strong { color: #5EEAD4; }
+
+    /* ── WHY CHOOSE US ── */
+    .why-section { padding: 88px 0; background: #0B1F3A; }
+    .why-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .why-img-wrap { position: relative; }
+    .why-img-wrap img { width: 100%; height: 420px; object-fit: cover; border-radius: 20px; display: block; }
+    .why-img-badge {
+      position: absolute; bottom: 20px; left: 20px;
+      background: rgba(7,22,44,0.92); backdrop-filter: blur(12px);
+      color: rgba(255,255,255,0.8); font-size: 0.8rem;
+      padding: 12px 18px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1); line-height: 1.55;
+    }
+    .why-img-badge strong { display: block; color: #5EEAD4; font-size: 0.9rem; margin-bottom: 2px; }
+    .why-points { display: flex; flex-direction: column; gap: 18px; margin-top: 8px; }
+    .why-point {
+      display: flex; gap: 16px; padding: 20px;
+      background: rgba(255,255,255,0.04); border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08); transition: 0.3s;
+    }
+    .why-point:hover { border-color: rgba(94,234,212,0.35); background: rgba(255,255,255,0.07); }
+    .why-point-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: rgba(94,234,212,0.1); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: #5EEAD4; margin-top: 2px; transition: 0.3s;
+    }
+    .why-point:hover .why-point-icon { background: var(--green); color: #fff; }
+    .why-point h4 { color: #fff; font-size: 0.94rem; margin-bottom: 4px; }
+    .why-point p  { color: rgba(255,255,255,0.5); font-size: 0.86rem; line-height: 1.62; margin: 0; }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 80px 0; text-align: center;
+      background: linear-gradient(135deg, #F8FAFB 0%, #e8f4f0 100%);
+    }
+    .cta-section .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    .cta-anchor-icon {
+      width: 64px; height: 64px; background: rgba(15,118,110,0.1);
+      border-radius: 18px; display: flex; align-items: center; justify-content: center;
+      color: var(--green); margin: 0 auto 24px;
+    }
+    .cta-section h2 { font-size: 1.9rem; font-weight: 800; color: var(--navy); margin-bottom: 14px; }
+    .cta-section p  { color: var(--muted); line-height: 1.78; margin-bottom: 32px; font-size: 0.96rem; }
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #5EEAD4; color: var(--navy); font-weight: 700;
+      font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: 0.3s ease;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(94,234,212,0.45); }
+
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 900px) {
+      .cat-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .why-grid { grid-template-columns: 1fr; gap: 36px; }
+      .why-img-wrap img { height: 280px; }
+      .stat-divider { display: none; }
+    }
+    @media (max-width: 600px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .anim-hero-content { padding: 110px 18px 70px; }
+    }
+    @media (max-width: 480px) {
+      .anim-hero-content { padding: 90px 16px 56px; }
+      .why-img-wrap { display: none; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <style>
+    /* ── PROCESS EQUIPMENT (page-specific) ── */
+    .equip-section { padding: 88px 0; background: #F8FAFB; }
+    .equip-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .equip-card {
+      background: #fff; border-radius: 18px; overflow: hidden;
+      border: 1px solid rgba(11,31,58,0.07);
+      box-shadow: 0 4px 16px rgba(11,31,58,0.05);
+      display: flex; flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .equip-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(11,31,58,0.12); border-color: var(--green); }
+    .equip-img { height: 200px; overflow: hidden; background: var(--navy); }
+    .equip-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .equip-card:hover .equip-img img { transform: scale(1.06); }
+    .equip-body { padding: 24px 24px 28px; }
+    .equip-body h3 { font-size: 1.08rem; font-weight: 700; color: var(--navy); margin: 0 0 8px; }
+    .equip-body > p { color: var(--muted); font-size: 0.88rem; line-height: 1.65; margin: 0 0 14px; }
+    .equip-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .equip-list li {
+      position: relative; padding-left: 20px;
+      font-size: 0.85rem; color: #4A5568; line-height: 1.5;
+    }
+    .equip-list li::before {
+      content: ''; position: absolute; left: 0; top: 7px;
+      width: 8px; height: 8px; border-radius: 2px; background: var(--green);
+    }
+    [dir="rtl"] .equip-list li { padding-left: 0; padding-right: 20px; }
+    [dir="rtl"] .equip-list li::before { left: auto; right: 0; }
+
+    @media (max-width: 900px) { .equip-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .equip-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div id="navbar-container"></div>
+
+
+<!-- ── HERO ── -->
+<section class="anim-hero" aria-label="Industrial Valves and Automation hero">
+  <div class="hero-bg" role="presentation"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="anim-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">›</span>
+      <a href="products.html">Products</a>
+      <span aria-hidden="true">›</span>
+      <span style="color:rgba(255,255,255,0.75)" data-i18n="valves.breadcrumb">Valves &amp; Automation</span>
+    </nav>
+
+    <span class="hero-eyebrow" data-i18n="valves.hero.eyebrow">Flow Control &amp; Automation Solutions</span>
+
+    <h1>
+      <span data-i18n="valves.hero.h1a">Industrial Valves</span><br />
+      <span class="teal" data-i18n="valves.hero.h1b">&amp; Automation</span>
+    </h1>
+
+    <p class="anim-hero-desc" data-i18n="valves.hero.desc">
+      Motor-operated, emergency shutdown, on-off, control and cryogenic valves — fully actuated, tested and integrated for oil &amp; gas, petrochemical and power plant projects, supplied direct to Saudi Arabia.
+    </p>
+
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span data-i18n="valves.badge1">50+ Years Valve Manufacturing Heritage</span>
+      </div>
+      <div class="hero-badge">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span data-i18n="valves.badge2">SIL-Rated ESD Valves</span>
+      </div>
+      <div class="hero-badge">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span data-i18n="valves.badge3">Proven on Global EPC Projects</span>
+      </div>
+    </div>
+  </div>
+
+  <svg class="hero-wave" viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,32 C240,64 480,0 720,32 C960,64 1200,0 1440,32 L1440,64 L0,64 Z" fill="#07162C"/>
+  </svg>
+</section>
+
+
+<!-- ── STATS ── -->
+<div class="stats-bar" aria-label="Key figures">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">50+</span>
+        <span class="stat-label" data-i18n="valves.stat1">Years Group Heritage</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">86"</span>
+        <span class="stat-label" data-i18n="valves.stat2">Largest Valve Supplied</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">#2500</span>
+        <span class="stat-label" data-i18n="valves.stat3">Max Pressure Class</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label" data-i18n="valves.stat4">Core Sectors Served</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── CATEGORIES ── -->
+<section class="cat-section" aria-labelledby="cat-heading">
+  <div class="container">
+    <span class="section-eyebrow" data-i18n="valves.cat.eyebrow">Product Categories</span>
+    <h2 id="cat-heading" class="section-heading" data-i18n="valves.cat.h2">Field Instrument Equipment</h2>
+    <p class="section-sub" data-i18n="valves.cat.sub">A complete range of automated and self-acting valves for critical process lines — from routine isolation to safety-instrumented shutdown.</p>
+
+    <div class="cat-grid" id="catGrid">
+
+      <div class="cat-card">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 data-i18n="valves.catitem1">Motor Operated Valves</h3>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+        </div>
+        <h3 data-i18n="valves.catitem2">ESD Valves (SIL)</h3>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        </div>
+        <h3 data-i18n="valves.catitem3">On/Off &amp; Control Valves</h3>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l-3 3m3-3l3 3m-3 15l-3-3m3 3l3-3M3 12h18M3 12l3-3m-3 3l3 3m15-3l-3-3m3 3l-3 3"/></svg>
+        </div>
+        <h3 data-i18n="valves.catitem4">Cryogenic Valves</h3>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon" aria-hidden="true">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+        </div>
+        <h3 data-i18n="valves.catitem5">Safety Relief &amp; Regulating Valves</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PRODUCT GALLERY ── -->
+<section class="anim-gallery reveal" aria-labelledby="gallery-heading">
+  <div class="container">
+    <span class="section-eyebrow" data-i18n="valves.gallery.eyebrow">Product Range</span>
+    <h2 id="gallery-heading" class="section-heading" data-i18n="valves.gallery.h2">Valves We Supply</h2>
+    <p class="section-sub" data-i18n="valves.gallery.sub">Ball, butterfly, gate and globe designs in carbon steel, stainless and super duplex — delivered fully actuated, tubed and tested.</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card reveal">
+        <img src="images/valves/mov-high-pressure-ball-valve.jpg"
+             alt="16-inch Class 2500 automated ball valve with actuator"
+             loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="valves.g1.tag">MOV &amp; On/Off</div>
+          <div class="gallery-card-title" data-i18n="valves.g1.title">Automated Ball, Butterfly &amp; Gate Valves</div>
+          <p class="gallery-card-text" data-i18n="valves.g1.desc">Motor-operated and pneumatic on/off valves up to Class 2500, including 16" #2500 and super duplex ball valves for high-pressure service.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/valves/control-valve-actuator.jpg"
+             alt="Ball valve with pneumatic actuator and control accessories"
+             loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="valves.g2.tag">ESD &amp; Control</div>
+          <div class="gallery-card-title" data-i18n="valves.g2.title">ESD &amp; Control Valves</div>
+          <p class="gallery-card-text" data-i18n="valves.g2.desc">SIL-rated emergency shutdown ball valves and ball, butterfly, V-notch and globe control valves with positioners and solenoid assemblies.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/valves/butterfly-valves-mov.jpg"
+             alt="Large-bore butterfly valves with electric actuators"
+             loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="valves.g3.tag">Large Bore</div>
+          <div class="gallery-card-title" data-i18n="valves.g3.title">Large Butterfly &amp; Non-Return Valves</div>
+          <p class="gallery-card-text" data-i18n="valves.g3.desc">Large-diameter butterfly and combined non-return valves — up to 86" (2150A) Class 150 — for power plant cooling water and utility lines.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card reveal">
+        <img src="images/valves/cryogenic-test.jpg"
+             alt="Cryogenic valve undergoing low-temperature testing"
+             loading="lazy" />
+        <div class="gallery-overlay">
+          <div class="gallery-tag" data-i18n="valves.g4.tag">Cryogenic</div>
+          <div class="gallery-card-title" data-i18n="valves.g4.title">Cryogenic Valves</div>
+          <p class="gallery-card-text" data-i18n="valves.g4.desc">Extended-bonnet valves for LNG and low-temperature service, cryogenically tested in liquid nitrogen before shipment.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── INSTRUMENT CONTROL & AUTOMATION ── -->
+<section class="process-section reveal" aria-labelledby="process-heading">
+  <div class="container">
+    <span class="section-eyebrow" data-i18n="valves.proc.eyebrow">Instrument Control &amp; Automation</span>
+    <h2 id="process-heading" class="section-heading" data-i18n="valves.proc.h2">Systems Beyond the Valve</h2>
+    <p class="section-sub" data-i18n="valves.proc.sub">Control panels, hydraulic power and shutdown systems engineered and integrated in-house, so the complete package arrives ready to install.</p>
+    <div class="process-lead-note">
+      <strong data-i18n="valves.lead.strong">Partner actuator brands</strong> <span data-i18n="valves.lead.rest">include Rotork, AUMA, Flowserve, Bettis, Biffi, Enertork, ASCO, Power-Genex and HKC — specified to suit your project's vendor list and site standards.</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── INTEGRATED PROCESS EQUIPMENT ── -->
+<section class="equip-section reveal" aria-labelledby="equip-heading">
+  <div class="container">
+    <span class="section-eyebrow" data-i18n="valves.equip.eyebrow">Integrated Industrial Equipment</span>
+    <h2 id="equip-heading" class="section-heading" data-i18n="valves.equip.h2">Process Equipment for Complete Plants</h2>
+    <p class="section-sub" data-i18n="valves.equip.sub">High-performance process equipment delivered in collaboration with leading Korean manufacturers.</p>
+
+    <div class="equip-grid">
+
+      <div class="equip-card">
+        <div class="equip-img">
+          <img src="images/valves/refinery-heaters.jpg" alt="Refinery and petrochemical complex at night" loading="lazy" />
+        </div>
+        <div class="equip-body">
+          <h3 data-i18n="valves.eq1.h3">Process Fired Heaters</h3>
+          <p data-i18n="valves.eq1.p">Fired heaters for refinery and petrochemical units.</p>
+          <ul class="equip-list">
+            <li data-i18n="valves.eq1.li1">CDU &amp; VDU Heaters</li>
+            <li data-i18n="valves.eq1.li2">CCR Platforming / Aromizing Heaters</li>
+            <li data-i18n="valves.eq1.li3">Pyrolysis (Naphtha Cracking) Furnaces</li>
+            <li data-i18n="valves.eq1.li4">Steam Reformers &amp; Superheaters</li>
+            <li data-i18n="valves.eq1.li5">LBO &amp; OCU Heaters</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img">
+          <img src="images/valves/industrial-fan.jpg" alt="Industrial centrifugal fan" loading="lazy" />
+        </div>
+        <div class="equip-body">
+          <h3 data-i18n="valves.eq2.h3">Industrial Fans &amp; Blowers</h3>
+          <p data-i18n="valves.eq2.p">Air-handling equipment for power and process plants.</p>
+          <ul class="equip-list">
+            <li data-i18n="valves.eq2.li1">Centrifugal Fans</li>
+            <li data-i18n="valves.eq2.li2">Axial Fans for Power Generation</li>
+            <li data-i18n="valves.eq2.li3">High Pressure Blowers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img">
+          <img src="images/valves/spherical-tanks.jpg" alt="Spherical storage tanks" loading="lazy" />
+        </div>
+        <div class="equip-body">
+          <h3 data-i18n="valves.eq3.h3">Storage Tanks</h3>
+          <p data-i18n="valves.eq3.p">Pressurised and low-temperature storage for gas and liquids.</p>
+          <ul class="equip-list">
+            <li data-i18n="valves.eq3.li1">Spherical Tanks</li>
+            <li data-i18n="valves.eq3.li2">Double Wall Tanks</li>
+            <li data-i18n="valves.eq3.li3">Cryogenic Tanks</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── WHY CHOOSE US ── -->
+<section class="why-section reveal" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="why-grid">
+
+      <div class="why-img-wrap reveal-left">
+        <img src="images/valves/automation-center.jpg"
+             alt="Valve automation center with actuated valves ready for testing"
+             loading="lazy" />
+        <div class="why-img-badge">
+          <strong data-i18n="valves.why.badge.strong">Korean Automation Center</strong>
+          <span data-i18n="valves.why.badge.sub">Actuation, assembly &amp; testing in-house</span>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <span class="section-eyebrow" style="color:#5EEAD4;" data-i18n="valves.why.eyebrow">Why Choose Us</span>
+        <h2 id="why-heading" class="section-heading" style="color:#fff;" data-i18n="valves.why.h2">Proven Valves, Fully Automated</h2>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.94rem;line-height:1.75;margin-bottom:24px;" data-i18n="valves.why.p">
+          We partner with a Korean valve automation specialist backed by a valve manufacturing group with over 50 years in oil &amp; gas, petrochemical and power — giving Saudi projects direct access to EPC-proven valves and control systems.
+        </p>
+
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-point-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="valves.why1.h4">50+ Years of Valve Expertise</h4>
+              <p data-i18n="valves.why1.p">Backed by leading Korean valve manufacturers serving domestic and global EPC clients for over five decades.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="valves.why2.h4">Major Project References</h4>
+              <p data-i18n="valves.why2.p">Supplied to refinery, gas, methanol and power projects across Asia, the Middle East and beyond — including Iraq, Indonesia, Malaysia, Mexico and Turkey.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="valves.why3.h4">Direct Supply to Saudi Arabia</h4>
+              <p data-i18n="valves.why3.p">Valves, actuators and control systems packaged to your datasheets, with import logistics managed start to finish.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;">
+          <a href="contact.html?tab=product#form-product" class="btn btn-primary" data-i18n="common.requestQuoteArrow" onclick="sessionStorage.setItem('selectedProduct','valves-automation')">Request a Quote →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CTA ── -->
+<section class="cta-section reveal" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-anchor-icon" aria-hidden="true">
+      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+    </div>
+    <h2 id="cta-heading" data-i18n="valves.cta.h2">Need Valves or an Automation Package?</h2>
+    <p data-i18n="valves.cta.p">Share your valve datasheets, size, pressure class and actuation requirements — our team will manage sourcing, testing and delivery to your site in Saudi Arabia.</p>
+    <a href="contact.html?tab=product#form-product" class="btn-cta" onclick="sessionStorage.setItem('selectedProduct','valves-automation')">
+      <span data-i18n="common.requestQuote">Request a Quote</span>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Efficient Solutions" class="brand-logo" width="160" height="46" loading="lazy" />
+        <p data-i18n="footer.desc">Your strategic gateway to Saudi Arabia's engineering and industrial landscape.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/efficientsolutions.sa" class="social-link" aria-label="Instagram">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.company">Company</h5>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="servcies.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.connect">Connect</h5>
+        <div class="footer-contact-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <a href="mailto:Sales@efficientsolutionsksa.com">            <span data-i18n="contact.email.val">Sales@efficientsolutionsksa.com</span> </a>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <a href="tel:+966504810549">+966 (0)50 481 0549</a>
+        </div>
+        <div class="footer-contact-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span>Eastern Province, Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">&copy; 2025 Efficient Solutions. All rights reserved.</span>
+      <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("xCVuhtk00wHM7dSGV");</script>
+<script src="script.js"></script>
+
+<script>
+  /* Staggered category card reveal */
+  const cards = document.querySelectorAll('#catGrid .cat-card');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = [...cards].indexOf(entry.target);
+        entry.target.style.animationDelay = (idx * 0.07) + 's';
+        entry.target.classList.add('revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(c => io.observe(c));
+</script>
+</body>
+</html>

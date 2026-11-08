@@ -122,12 +122,15 @@
     }
 
     /* PRODUCTS GRID */
-    .products-section {
+    .products-section,
+    .services-section {
       padding: 90px 0 100px;
       background: #F8FAFB;
     }
-    .products-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .products-section .intro { margin-bottom: 52px; }
+    .products-section .container,
+    .services-section .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .products-section .intro,
+    .services-section .intro { margin-bottom: 52px; }
 
     .products-grid-v2 {
       display: grid;
@@ -510,60 +513,8 @@
 <body>
 
    <!-- NAVIGATION -->
- <nav id="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Efficient Solutions Home">
-      <img src="logo.png" alt="Efficient Solutions Logo" width="180" height="52" />
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-      <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-      <li class="nav-dropdown">
-        <a href="products.html" data-i18n="nav.products" >Products</a><div class="dropdown-arrow"></div>
-        <ul class="dropdown-menu">
-          <li><a href="products.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
-          <li><a href="products.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
-          <li><a href="products.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown">
-        <a href="servcies.html" data-i18n="nav.services" class="active">Services</a><div class="dropdown-arrow"></div>
-        <ul class="dropdown-menu">
-          <li><a href="servcies.html?section=mechanical" data-i18n="prod.cat.mechanical">Mechanical</a></li>
-          <li><a href="servcies.html?section=electrical" data-i18n="prod.cat.electrical">Electrical</a></li>
-          <li><a href="servcies.html?section=instrumental" data-i18n="prod.cat.Instrumentation">Control & Instrumentation</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
-    </ul>
-    <div class="nav-actions">
-      <div class="lang-toggle" role="group" aria-label="Language selection">
-        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
-      </div>
-      <a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get in Touch</a>
-      <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
+   <div id="navbar-container"></div>
 
-
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
-    <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="about.html" data-i18n="nav.about">About Us</a>
-   <a href="products.html"     data-i18n="nav.products" class="active">Products</a>
-   <a href="servcies.html" data-i18n="nav.services" class="active">Services</a>
-    <a href="contact.html" data-i18n="nav.contact">Contact</a>
-    <div class="mobile-nav-footer">
-      <div class="lang-toggle">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ar">AR</button>
-      </div>
-      <a href="contact.html" class="btn btn-primary" style="font-size:0.82rem;padding:10px 18px;" data-i18n="nav.cta">Get in Touch</a>
-    </div>
-  </nav>
 
 <!-- HERO -->
 <section class="products-hero">
@@ -580,7 +531,7 @@
       <p data-i18n="svcpage.hero.desc">In-house engineering support plus specialist electrical services — power quality, safety, maintenance, and thermography — delivered for Saudi Arabia's industrial sector.</p>
 
       <div class="hero-stats">
-        <div class="hero-stat"><strong>12</strong><span data-i18n="svcpage.stat1">Service Lines</span></div>
+        <div class="hero-stat"><strong>18</strong><span data-i18n="svcpage.stat1">Service Lines</span></div>
         <div class="hero-stat"><strong>KSA</strong><span data-i18n="prod.hero.stat2">Market Focus</span></div>
         <div class="hero-stat"><strong>ITC</strong><span data-i18n="prod.hero.stat3">Certified</span></div>
       </div>
@@ -646,45 +597,10 @@
         </div>
 
         <div class="cat-body" id="body-mechanical">
-          <div class="products-grid-v2">
-
-            <!--
-            PLACEHOLDER — Mechanical Product 2
-            Duplicate and fill in the block below when ready:
-
-            <a href="YOUR-PRODUCT-PAGE.html" class="pcard">
-              <div class="pcard-img-wrap">
-                <img src="YOUR_IMAGE_URL" alt="Product Name" />
-                <div class="pcard-img-overlay"></div>
-                <span class="pcard-badge">Badge Text</span>
-              </div>
-              <div class="pcard-body">
-                <span class="pcard-partner">Partner / Supplier Name</span>
-                <h2>Product Title</h2>
-                <p>Short description of the product and its industrial application.</p>
-                <div class="pcard-footer">
-                  <span class="pcard-link">Explore Product</span>
-                  <div class="pcard-tags">
-                    <span class="pcard-tag">Tag 1</span>
-                    <span class="pcard-tag">Tag 2</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            -->
-
-            <!--
-            PLACEHOLDER — Mechanical Product 3
-            <a href="#" class="pcard"> ... </a>
-            -->
-
-          </div>
           <div class="cat-empty">
-            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <p data-i18n="prod.cat.coming">Products coming soon — check back shortly.</p>
+            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <p data-i18n="serv.cat.coming">Services coming soon — check back shortly.</p>
           </div>
-
-
         </div>
 
       </div><!-- /cat-mechanical -->
@@ -925,6 +841,132 @@
         </div>
       </div><!-- /cat-instrumental -->
 
+      <!-- ══ IT ══════════════════════════════════════ -->
+      <div class="cat-accordion" id="cat-it">
+
+        <div class="cat-accordion-header" role="button" aria-expanded="false" aria-controls="body-it" style="cursor:pointer;">
+          <div class="cat-left">
+            <div class="cat-icon">
+              <svg width="30" height="40" fill="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M7.75 15.5c.167-.333.25-.833.25-1.5h4c0 .667.083 1.167.25 1.5H13a.5.5 0 010 1H7a.5.5 0 010-1h.75z"/>
+                <path fill-rule="evenodd" d="M15.991 5H4c-.325 0-.502.078-.602.145a.758.758 0 00-.254.302A1.46 1.46 0 003 6.01V12c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 00.538.143L4.01 13H16c.325 0 .502-.078.602-.145a.758.758 0 00.254-.302 1.464 1.464 0 00.143-.538L17 11.99V6c0-.325-.078-.502-.145-.602a.757.757 0 00-.302-.254A1.46 1.46 0 0015.99 5zM16 4H4C2 4 2 6 2 6v6c0 2 2 2 2 2h12c2 0 2-2 2-2V6c0-2-2-2-2-2z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <div>
+              <div class="cat-title" data-i18n="prod.cat.it">IT</div>
+              <div class="cat-sub" data-i18n="prod.cat.it.sub">Information Technology</div>
+            </div>
+          </div>
+          <div class="cat-chevron">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+
+        <div class="cat-body" id="body-it">
+          <div class="services-list">
+
+            <div class="pcard-h">
+              <div class="pcard-img-wrap">
+                <img src="images/software/svc-erp.jpg" alt="ERP implementation team at work" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge" data-i18n="svcpage.it1.badge">ERP</span>
+              </div>
+              <div class="pcard-body">
+                <h2 data-i18n="svcpage.it1.title">ERP – Enterprise Resource Planning</h2>
+                <p data-i18n="svcpage.it1.desc">Implementation of an AI-powered cloud ERP for finance, inventory, sales and procurement — configured to your workflows, with data migration and user training.</p>
+                <div class="pcard-footer">
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','erp-services')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.it1.tag">Implementation</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard-h">
+              <div class="pcard-img-wrap">
+                <img src="images/software/svc-crm.jpg" alt="Sales team discussing a client account" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge" data-i18n="svcpage.it2.badge">CRM</span>
+              </div>
+              <div class="pcard-body">
+                <h2 data-i18n="svcpage.it2.title">CRM – Customer Relationship Management</h2>
+                <p data-i18n="svcpage.it2.desc">Set-up of a cloud CRM covering leads, contacts, opportunities, sales automation and customer service, with real-time dashboards for management.</p>
+                <div class="pcard-footer">
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','crm-services')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.it2.tag">Sales &amp; Service</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard-h">
+              <div class="pcard-img-wrap">
+                <img src="images/software/svc-hcm.jpg" alt="Colleagues reviewing HR records on a laptop" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge" data-i18n="svcpage.it3.badge">HCM</span>
+              </div>
+              <div class="pcard-body">
+                <h2 data-i18n="svcpage.it3.title">HCM – Human Capital Management</h2>
+                <p data-i18n="svcpage.it3.desc">Payroll, time and attendance, leave, recruitment, appraisals and employee self-service — deployed and configured for local statutory requirements.</p>
+                <div class="pcard-footer">
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','hcm-services')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.it3.tag">HR &amp; Payroll</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard-h">
+              <div class="pcard-img-wrap">
+                <img src="images/software/svc-ai-analytics.jpg" alt="Business performance charts on a tablet" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge" data-i18n="svcpage.it4.badge">AI &amp; Analytics</span>
+              </div>
+              <div class="pcard-body">
+                <h2 data-i18n="svcpage.it4.title">AI-Powered Analytics &amp; Business Automation</h2>
+                <p data-i18n="svcpage.it4.desc">Role-based BI dashboards, KPI tracking and forecasting, plus an AI assistant with voice and text commands and automated workflows across ERP, CRM and HCM.</p>
+                <div class="pcard-footer">
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','ai-analytics-automation')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.it4.tag">Business Intelligence</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard-h">
+              <div class="pcard-img-wrap">
+                <img src="images/software/svc-integration.jpg" alt="Two professionals planning a system integration" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge" data-i18n="svcpage.it5.badge">Integration</span>
+              </div>
+              <div class="pcard-body">
+                <h2 data-i18n="svcpage.it5.title">System Integration</h2>
+                <p data-i18n="svcpage.it5.desc">Connecting your business software with existing systems, payment gateways and WhatsApp Business — automating invoices, reminders and order updates.</p>
+                <div class="pcard-footer">
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','system-integration')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.it5.tag">APIs &amp; Connectors</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pcard-h">
+              <div class="pcard-img-wrap">
+                <img src="images/software/svc-einvoicing.jpg" alt="Finance professional reviewing invoices" />
+                <div class="pcard-img-overlay"></div>
+                <span class="pcard-badge" data-i18n="svcpage.it6.badge">E-Invoicing</span>
+              </div>
+              <div class="pcard-body">
+                <h2 data-i18n="svcpage.it6.title">ZATCA-Compliant E-Invoicing</h2>
+                <p data-i18n="svcpage.it6.desc">Generate, validate and report B2B, B2C and B2G e-invoices under ZATCA Phase 1 and Phase 2, with QR codes and built-in validation tools.</p>
+                <div class="pcard-footer">
+                  <a href="contact.html?tab=product#form-product" class="pcard-link" data-i18n="svcpage.link.enquire" onclick="sessionStorage.setItem('selectedProduct','zatca-e-invoicing')">Enquire</a>
+                  <div class="pcard-tags"><span class="pcard-tag" data-i18n="svcpage.it6.tag">ZATCA Phase 2</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /cat-it -->
+
+    </div><!-- /container -->
   </section>
 
   <!-- TRUST STRIP -->
