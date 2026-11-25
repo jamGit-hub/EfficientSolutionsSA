@@ -35,7 +35,7 @@ const translations = {
     'about.p1':       'Efficient Solutions is a Saudi-based industrial services & equipment supplier firm dedicated to helping international engineering and industrial companies enter and thrive in the Kingdom. We act as a strategic gateway — combining deep local knowledge with international business acumen.',
     'about.p2':       'From regulatory guidance to strategic market entry, we provide end-to-end support for companies looking to establish a meaningful, lasting presence in Saudi Arabia\'s rapidly growing economy.',
     'about.badge':    'Preparing for Market Entry Support in Saudi Arabia',
-    'about.cta':      'Learn More About Us',
+    'about.cta':      'Learn More About Us', 
     'val.excellence':   'Excellence',
     'val.integrity':    'Integrity',
     'val.innovation':   'Innovation',
