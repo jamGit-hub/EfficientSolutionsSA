@@ -32,7 +32,7 @@ const translations = {
     /* About Preview */
     'about.tag':      'About Efficient Solutions',
     'about.h2':       'A Bridge Between Global Expertise and Saudi Opportunity',
-    'about.p1':       'Efficient Solutions is a Saudi-based consulting firm dedicated to helping international engineering and industrial companies enter and thrive in the Kingdom. We act as a strategic gateway — combining deep local knowledge with international business acumen.',
+    'about.p1':       'Efficient Solutions is a Saudi-based industrial services & equipment supplier firm dedicated to helping international engineering and industrial companies enter and thrive in the Kingdom. We act as a strategic gateway — combining deep local knowledge with international business acumen.',
     'about.p2':       'From regulatory guidance to strategic market entry, we provide end-to-end support for companies looking to establish a meaningful, lasting presence in Saudi Arabia\'s rapidly growing economy.',
     'about.badge':    'Preparing for Market Entry Support in Saudi Arabia',
     'about.cta':      'Learn More About Us',
@@ -117,6 +117,7 @@ const translations = {
     'footer.connect': 'Connect',
     'footer.rights':  '© 2025 Efficient Solutions. All rights reserved.',
     'footer.privacy': 'Privacy Policy',
+    'footer.location': 'Eastern Province, Kingdom of Saudi Arabia',
 
     /* Contact */
     'contact.tag': 'Get in Touch',
@@ -1303,7 +1304,7 @@ const translations = {
     /* About Preview */
     'about.tag':      'عن إفيشنت سوليوشنز',
     'about.h2':       'جسر بين الخبرة العالمية والفرصة السعودية',
-    'about.p1':       'إفيشنت سوليوشنز شركة استشارية سعودية متخصصة في مساعدة الشركات الهندسية والصناعية الدولية على الدخول إلى المملكة والنمو فيها. نعمل بوصفنا بوابة استراتيجية تجمع بين المعرفة المحلية العميقة والقدرات التجارية الدولية.',
+    'about.p1':       'إفيشنت سوليوشنز شركة سعودية للخدمات الصناعية وتوريد المعدات، متخصصة في مساعدة الشركات الهندسية والصناعية الدولية على الدخول إلى المملكة والنمو فيها. نعمل بوصفنا بوابة استراتيجية تجمع بين المعرفة المحلية العميقة والقدرات التجارية الدولية.',
     'about.p2':       'من التوجيه التنظيمي إلى الدخول الاستراتيجي للسوق، نُقدِّم دعماً شاملاً للشركات الراغبة في تأسيس حضور حقيقي في الاقتصاد السعودي المتنامي.',
     'about.badge':    'سنة من النشاط في السوق السعودي',
     'about.cta':      'اعرف أكثر عنّا',
@@ -1390,6 +1391,7 @@ const translations = {
     'footer.connect': 'تواصل',
     'footer.rights':  '© 2025 إفيشنت سوليوشنز. جميع الحقوق محفوظة.',
     'footer.privacy': 'سياسة الخصوصية',
+    'footer.location': 'المنطقة الشرقية، المملكة العربية السعودية',
 
     /* Contact */
     'contact.tag': 'تواصل معنا',
@@ -2963,6 +2965,21 @@ function initProductSelection() {
     }, 150);
   }
 }
+
+/* ── Shared Footer ────────────────────────────────────────── */
+/* Every page has <div id="footer-placeholder"></div>; markup lives in footer.html. */
+fetch('footer.html')
+  .then(res => {
+    if (!res.ok) throw new Error('Footer not found');
+    return res.text();
+  })
+  .then(html => {
+    const placeholder = document.getElementById('footer-placeholder');
+    if (!placeholder) return;
+    placeholder.outerHTML = html;
+    applyLanguage(currentLang);   // translate footer labels (data-i18n)
+  })
+  .catch(err => console.error('Footer failed to load:', err));
 
 
 
